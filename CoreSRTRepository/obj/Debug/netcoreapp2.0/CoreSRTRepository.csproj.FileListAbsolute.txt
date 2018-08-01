@@ -1,0 +1,13 @@
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.deps.json
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.dll
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.csprojResolveAssemblyReference.cache
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.csproj.CoreCompileInputs.cache
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.AssemblyInfoInputs.cache
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.AssemblyInfo.cs
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.pdb
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTModels.dll
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTModels.pdb
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.dll
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.pdb
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.runtimeconfig.json
+F:\VSC\CoreWeb\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.runtimeconfig.dev.json
