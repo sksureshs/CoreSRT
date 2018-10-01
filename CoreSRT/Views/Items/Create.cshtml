@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using CoreSRT.Models.ViewModels
+
+@model ItemViewModel
+<div>
+<p align="center"> <b>Create New Item</b> </p>
+    </div>
+
+
+    <div>
+        <p>
+            @using (Html.BeginForm("Create", "Items", FormMethod.Post))
+            {
+            <table class="table">
+
+                <tr>
+                    <td>
+                    @Html.Label("Description")
+                        </td><td>
+    @Html.TextBoxFor(model => model.Description)
+                    </td>
+</tr>
+                <tr>
+                    <td>
+                        @Html.Label("Rate")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(model => model.Rate)
+                        </td>
+</tr>
+                <tr>
+                    <td>
+                        @Html.Label("CGST")
+                    </td><td>
+    @Html.TextBoxFor(model => model.CGST)
+                    </td>
+</tr>
+
+                <tr>
+                    <td>
+                    @Html.Label("SGCT")
+                    </td><td>
+    @Html.TextBoxFor(model => model.SGST)
+</td>
+                </tr>
+                <tr></tr>
+                </table>
+                <input type="submit" value="Save" class="btn btn-default" />
+
+}
+            <br>
+            @Html.ActionLink("Back to List", "Index")
+</p>
+    </div>

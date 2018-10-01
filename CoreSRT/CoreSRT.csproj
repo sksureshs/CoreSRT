@@ -20,4 +20,7 @@
     <ProjectReference Include="..\CoreSRTRepository\CoreSRTRepository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Items\" />
+  </ItemGroup>
 </Project>

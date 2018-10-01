@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using CoreSRT.Models.ViewModels
+
+@model List<ItemViewModel>
+
+<div>
+    <p align ="center"> <b>Items</b> </p>
+    </div>
+<div>
+    <button class="btn btn-default" onclick="window.location.href='@Url.Action("Create", "Items")'"> Add New </button>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Description</td>
+            <td>CGST</td>
+            <td>SGST</td>
+            <td>Date From </td>
+            <td>Date To </td>
+        </tr>
+        </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.CGST
+            </td>
+            <td>
+                @item.SGST
+            </td>
+            <td>
+                @item.DateFrom
+            </td>
+            <td>
+                @item.DateTo
+            </td>
+        </tr>
+
+    }
+
+</table>
+ </div>

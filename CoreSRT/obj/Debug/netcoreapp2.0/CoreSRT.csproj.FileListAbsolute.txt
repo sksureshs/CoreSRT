@@ -1,15 +1,31 @@
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.deps.json
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.runtimeconfig.json
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.runtimeconfig.dev.json
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.dll
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.pdb
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.csprojResolveAssemblyReference.cache
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.csproj.CoreCompileInputs.cache
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.AssemblyInfoInputs.cache
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.AssemblyInfo.cs
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.dll
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.pdb
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTModels.dll
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTRepository.dll
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTModels.pdb
-F:\VSC\CoreWeb\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTRepository.pdb
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.deps.json
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.runtimeconfig.json
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.runtimeconfig.dev.json
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.dll
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.pdb
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.csprojResolveAssemblyReference.cache
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.csproj.CoreCompileInputs.cache
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.AssemblyInfoInputs.cache
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.AssemblyInfo.cs
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.dll
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.pdb
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTModels.dll
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTRepository.dll
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTModels.pdb
+F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTRepository.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.runtimeconfig.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.runtimeconfig.dev.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRT.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTModels.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTRepository.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTModels.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTRepository.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.csprojAssemblyReference.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.csproj.CopyComplete
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.pdb

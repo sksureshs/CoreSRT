@@ -1,9 +1,18 @@
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\bin\Debug\netcoreapp2.0\CoreSRTService.deps.json
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\bin\Debug\netcoreapp2.0\CoreSRTService.dll
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\bin\Debug\netcoreapp2.0\CoreSRTService.pdb
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\obj\Debug\netcoreapp2.0\CoreSRTService.csprojResolveAssemblyReference.cache
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\obj\Debug\netcoreapp2.0\CoreSRTService.csproj.CoreCompileInputs.cache
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\obj\Debug\netcoreapp2.0\CoreSRTService.AssemblyInfoInputs.cache
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\obj\Debug\netcoreapp2.0\CoreSRTService.AssemblyInfo.cs
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\obj\Debug\netcoreapp2.0\CoreSRTService.dll
-F:\VSC\CoreWeb\CoreSRT\CoreSRTService\obj\Debug\netcoreapp2.0\CoreSRTService.pdb
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/bin/Debug/netcoreapp2.0/CoreSRTService.deps.json
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/bin/Debug/netcoreapp2.0/CoreSRTService.dll
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/bin/Debug/netcoreapp2.0/CoreSRTService.pdb
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.csprojResolveAssemblyReference.cache
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.csproj.CoreCompileInputs.cache
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.AssemblyInfoInputs.cache
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.AssemblyInfo.cs
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.dll
+F:/VSC/CoreWeb/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/bin/Debug/netcoreapp2.0/CoreSRTService.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/bin/Debug/netcoreapp2.0/CoreSRTService.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/bin/Debug/netcoreapp2.0/CoreSRTService.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.csprojAssemblyReference.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Debug/netcoreapp2.0/CoreSRTService.pdb

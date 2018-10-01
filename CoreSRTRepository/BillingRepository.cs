@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using CoreSRTModels;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace CoreSRTRepository
 {
@@ -21,8 +22,9 @@ namespace CoreSRTRepository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Item>().HasKey(i => i.ItemId);
-            modelBuilder.Entity<Item>().Property(i => i.Description).IsRequired();
+            //modelBuilder.Entity<Item>().HasKey(i => i.ItemId);
+            //modelBuilder.Entity<Item>().Property(i => i.Description).IsRequired();
+            modelBuilder.Entity<Item>().ToTable("Items");
 
            // modelBuilder.Entity<Producer>().HasKey(p => p.ProducerId);
             base.OnModelCreating(modelBuilder);
@@ -38,5 +40,10 @@ namespace CoreSRTRepository
         {
             return await Items.SingleAsync(i => i.ItemId == itemId);
         }
+
+        public IEnumerable<Item> GetAllItems()
+        {
+            var temp = Items.ToListAsync().Result;
+            return temp;        }
     }
 }

@@ -11,5 +11,7 @@ namespace CoreSRTRepository
         void CreateItem(Item item);
 
         Task<Item> GetItemAsync(int itemId);
+
+        IEnumerable<Item> GetAllItems(); 
     }
 }
