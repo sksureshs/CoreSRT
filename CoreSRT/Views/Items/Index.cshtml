@@ -16,6 +16,7 @@
     <thead>
         <tr>
             <td>Description</td>
+            <td>Rate</td>
             <td>CGST</td>
             <td>SGST</td>
             <td>Date From </td>
@@ -29,6 +30,9 @@
                 @item.Description
             </td>
             <td>
+                @item.Rate
+            </td>
+            <td>
                 @item.CGST
             </td>
             <td>
@@ -39,6 +43,10 @@
             </td>
             <td>
                 @item.DateTo
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { Id = @item.Id }) | @Html.ActionLink("Delete", "Delete", new { Id = @item.Id }, 
+                new { onclick ="return confirm('Do you realy want to delete this Item?')" })
             </td>
         </tr>
 

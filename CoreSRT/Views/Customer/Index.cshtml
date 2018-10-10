@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using CoreSRT.Models.ViewModels
+
+@model List<CustomerViewModel>
+
+<div>
+    <p align ="center"> <b>Customers</b> </p>
+    </div>
+<div>
+    <button class="btn btn-default" onclick="window.location.href='@Url.Action("Create", "Customer")'"> Add New </button>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Contact Number</td>
+            <td>EmailId</td>
+            <td>GSTNo</td>
+            <td>Type</td>
+        </tr>
+        </thead>
+    @foreach (var customer in Model)
+    {
+        //<div class ="row">
+        <tr>
+            <td>
+                @customer.Name
+            </td>
+            <td>
+                @customer.Address
+            </td>
+            <td>
+                @customer.ContactNumber
+            </td>
+            <td>
+                @customer.EmailId
+            </td>
+            <td>
+                @customer.GSTNo
+            </td>
+            <td>
+                @customer.Type
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { Id = customer.CustomerId }) | @Html.ActionLink("Delete", "Delete", new { Id = customer.CustomerId }, 
+                new { onclick ="return confirm('Do you realy want to delete this Customer?')" })
+            </td>
+        </tr>
+            //</div>
+    }
+
+</table>
+ </div>

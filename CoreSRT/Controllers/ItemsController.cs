@@ -28,7 +28,7 @@ namespace CoreSRT.Controllers
             item.DateFrom = DateTime.Now;
             item.DateTo = DateTime.MaxValue;
             _billingContext.CreateItem(item);
-            return Index();
+            return Redirect("Index");
         }
 
         public IActionResult Create()
@@ -36,48 +36,52 @@ namespace CoreSRT.Controllers
             return View();
         }
 
-        public IActionResult Bills()
+        public IActionResult Delete(int? id)
         {
-            var bills = new List<BillViewModel>
+            if (id.HasValue)
             {
-                new BillViewModel
-                {
-                    CustomerName = "cus1",
-                    Total = 34.3m
-                },
-                new BillViewModel
-                {
-                    CustomerName = "cus2",
-                    Total=50m
-                }
-            };
+                _billingContext.DeleteItem(id.Value);
+            }
 
-            return View(bills);
+            return Index();
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            var temp = _billingContext.GetAllItems().ToList();
-
-            temp[0].ItemId = 10;
-
-            var items = new List<ItemViewModel>
-            {
-                new  ItemViewModel
-                {
-                    Description = "Dump Item1"
-                }
-            };
-            items.AddRange(temp.Select(Map).ToList());
+            var items = _billingContext.GetAllItems().Select(Map).ToList();
 
             return View("Index", items);
+        }
+
+        public IActionResult Edit(int? id)
+        {
+            if (id.HasValue)
+            {
+                var item = Map(_billingContext.GetItemAsync(id.Value).Result);
+
+                return View(item);
+            }
+            return Index();
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, ItemViewModel itemViewModel)
+        {
+
+            var item = Map(itemViewModel);
+            item.ItemId = id;
+            item.DateFrom = DateTime.Now;
+            item.DateTo = DateTime.MaxValue;
+            _billingContext.UpdateItem(item);
+            return Redirect("Index");
         }
 
         private ItemViewModel Map(Item item)
         {
             return new ItemViewModel
             {
+                Id = item.ItemId,
                 CGST = item.CGST,
                 DateFrom = item.DateFrom,
                 DateTo = item.DateTo,
@@ -91,6 +95,7 @@ namespace CoreSRT.Controllers
         {
             return new Item
             {
+                ItemId = model.Id,
                 CGST = model.CGST,
                 DateFrom=model.DateFrom,
                 DateTo = model.DateTo,

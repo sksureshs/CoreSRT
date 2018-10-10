@@ -4,6 +4,8 @@ namespace CoreSRT.Models.ViewModels
 {
     public class ItemViewModel
     {
+        public int Id { get; set; }
+
         public string Description { get; set; }
         
         public double Rate { get; set; }

@@ -22,7 +22,7 @@ namespace CoreSRTModels
 
     public enum CustomerType
     {
-        Shop = 0,
+        Retailer = 0,
         Distributor = 1
     }
 }

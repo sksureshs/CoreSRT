@@ -4,12 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using CoreSRTModels;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CoreSRTRepository
 {
-    public class BillingContext: DbContext, IBillingRepository
+    public class BillingContext : DbContext, IBillingRepository
     {
-        
+
         public BillingContext(DbContextOptions<BillingContext> options) : base(options)
         {
         }
@@ -22,16 +23,39 @@ namespace CoreSRTRepository
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Item>().HasKey(i => i.ItemId);
-            //modelBuilder.Entity<Item>().Property(i => i.Description).IsRequired();
             modelBuilder.Entity<Item>().ToTable("Items");
+            modelBuilder.Entity<Customer>().ToTable("Customers");
+            modelBuilder.Entity<Bill>().ToTable("Bills");
 
-           // modelBuilder.Entity<Producer>().HasKey(p => p.ProducerId);
             base.OnModelCreating(modelBuilder);
         }
 
         public void CreateItem(Item item)
         {
+            Items.Add(item);
+            SaveChanges();
+        }
+
+        public void DeleteItem(int itemId)
+        {
+            var item = Items.First(i => i.ItemId == itemId);
+            if (item == null)
+            {
+                throw new Exception($"Item {itemId} not present!");
+            }
+
+            Items.Remove(item);
+            SaveChanges();
+        }
+
+        public void UpdateItem(Item item)
+        {
+            var oldItem = Items.FirstOrDefault(i => i.ItemId == item.ItemId);
+            if (oldItem != null)
+            {
+                oldItem.DateTo = DateTime.Now;
+            }
+            item.ItemId = 0;
             Items.Add(item);
             SaveChanges();
         }
@@ -43,7 +67,46 @@ namespace CoreSRTRepository
 
         public IEnumerable<Item> GetAllItems()
         {
-            var temp = Items.ToListAsync().Result;
-            return temp;        }
+            var temp = Items.ToListAsync().Result.Where(i => i.DateTo >= DateTime.Now);
+            return temp;
+        }
+
+        #region "Customer"
+        public void CreateCustomer(Customer customer)
+        {
+            Customers.Add(customer);
+            SaveChanges();
+        }
+
+        public void DeleteCustomer(int customerId)
+        {
+            var customer = Customers.First(c => c.CustomerId == customerId);
+
+            if(customer == null)
+            {
+                throw new Exception($"Customer {customerId} not present!");
+            }
+
+            Customers.Remove(customer);
+            SaveChanges();
+        }
+
+        public void UpdateCustomer(int customerId, Customer customer)
+        {
+            SaveChanges();
+        }
+
+        public IEnumerable<Customer> GetAllCustomer()
+        {
+            return Customers.ToListAsync().Result;
+        }
+
+        public Customer GetCustomer(int customerId)
+        {
+            return Customers.First(c => c.CustomerId == customerId);
+        }
+
+        #endregion
+
     }
 }
