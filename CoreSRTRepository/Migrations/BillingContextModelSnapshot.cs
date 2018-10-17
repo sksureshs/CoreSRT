@@ -45,7 +45,7 @@ namespace CoreSRTRepository.Migrations
 
                     b.Property<double>("OutStandingAmount");
 
-                    b.Property<int>("ShopIdCustomerId");
+                    b.Property<int>("ShopCustomerId");
 
                     b.Property<double>("TotalPrice");
 
@@ -53,7 +53,7 @@ namespace CoreSRTRepository.Migrations
 
                     b.HasKey("BillId");
 
-                    b.HasIndex("ShopIdCustomerId");
+                    b.HasIndex("ShopCustomerId");
 
                     b.ToTable("Bills");
                 });
@@ -63,6 +63,8 @@ namespace CoreSRTRepository.Migrations
                     b.Property<int>("BillingItmeId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<int>("BillId");
+
                     b.Property<double>("CGST");
 
                     b.Property<int>("ItemId");
@@ -71,13 +73,15 @@ namespace CoreSRTRepository.Migrations
 
                     b.Property<int>("Quantity");
 
-                    b.Property<double>("SGCT");
+                    b.Property<double>("SGST");
 
                     b.Property<double>("SellingPrice");
 
                     b.Property<double>("TotalPrice");
 
                     b.HasKey("BillingItmeId");
+
+                    b.HasIndex("BillId");
 
                     b.HasIndex("ItemId");
 
@@ -180,14 +184,19 @@ namespace CoreSRTRepository.Migrations
 
             modelBuilder.Entity("CoreSRTModels.Bill", b =>
                 {
-                    b.HasOne("CoreSRTModels.Customer", "ShopId")
+                    b.HasOne("CoreSRTModels.Customer", "Shop")
                         .WithMany()
-                        .HasForeignKey("ShopIdCustomerId")
+                        .HasForeignKey("ShopCustomerId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("CoreSRTModels.BillingItem", b =>
                 {
+                    b.HasOne("CoreSRTModels.Bill", "Bill")
+                        .WithMany()
+                        .HasForeignKey("BillId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("CoreSRTModels.Item", "Item")
                         .WithMany()
                         .HasForeignKey("ItemId")

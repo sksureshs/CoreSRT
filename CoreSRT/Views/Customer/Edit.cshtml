@@ -5,67 +5,71 @@
 }
 @using CoreSRT.Models.ViewModels
 @model CustomerViewModel
-<div>
-    <script>function radioClick(val)
-        {
-            $('#CGST').val(val);
-            $('#SGST').val(val);
-            $('#hiCGST').val(val);
-           $('#hiSGST').val(val);
-        }</script>
+
+
     <p align="center"> <b>Edit New Item</b> </p>
-</div>
 
 <div>
     <p>
         @using (Html.BeginForm("Edit", "Customer", FormMethod.Post))
         {
             
-            <table class="table">
-                <tr>
-                    <td>
-                        <div class="table-cell">
-                            @Html.Label("Name")
-                        </div>
-                    </td>
-                    <td>
-                        @Html.EditorFor(model => model.Name)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("Rate")
-                    </td>
-                    <td>
-                        @Html.EditorFor(model => model.GSTNo)
-                    </td>
-                <tr>
-                    <td>
-                        @Html.Label("Address")
-                    </td>
-                    <td>
-                        @Html.EditorFor(m=>m.Address)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("EmailId")
-                    </td>
-                    <td>
-                        @Html.EditorFor(m=>m.EmailId)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        @Html.Label("Type")
-                    </td>
-                    <td>
-                        @Html.DropDownListFor(m=>m.TypeId, Model.Type)
+        <table class="table">
+            <tr>
+                <td>
+                    <div class="table-cell">
+                        @Html.Label("Name")
+                    </div>
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("GSTNo")
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.GSTNo)
+                </td>
 
-                    </td>
-                </tr>
-                <tr></tr>
-            </table>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("ContactNumber")
+                </td>
+                <td>
+                    @Html.EditorFor(model => model.ContactNumber)
+
+                </td>
+            <tr>
+            <tr>
+                <td>
+                    @Html.Label("Address")
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.Address)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("EmailId")
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.EmailId)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("Type")
+                </td>
+                <td>
+                    @Html.DropDownListFor(m => m.TypeId, new SelectList(Model.Types, "TypeId", "Type"),
+                 Model.Types.First(t => t.TypeId == Model.TypeId).Type)
+                </td>
+            </tr>
+            <tr></tr>
+        </table>
             <input asp-for="CustomerId" value=@Model.CustomerId type="hidden">
             <input type="submit" value="Save" class="btn btn-default" />
         }

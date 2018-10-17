@@ -4,81 +4,76 @@
 @{
 }
 @using CoreSRT.Models.ViewModels
+@model CustomerViewModel
 
-@model ItemViewModel
-<div>
-    <script>
-        function radioClick(val)
-        {
-            $('#CGST').val(val);
-            $('#SGST').val(val);
-            $('#hiCGST').val(val);
-           $('#hiSGST').val(val);
-        }
-    </script>
 <p align="center"> <b>Create New Item</b> </p>
-    </div>
 
+<div>
+    <p>
+        @using (Html.BeginForm("Create", "Customer", FormMethod.Post))
+        {
 
-    <div>
-        <p>
-            @using (Html.BeginForm("Create", "Items", FormMethod.Post))
-            {
             <table class="table">
-
                 <tr>
-
                     <td>
                         <div class="table-cell">
-                        @Html.Label("Description")
-                            </div>
+                            @Html.Label("Name")
+                        </div>
                     </td>
-                        <td>
-    @Html.TextBoxFor(model => model.Description)
+                    <td>
+                        @Html.TextBoxFor(model => model.Name)
+                        @Html.ValidationMessageFor(m => m.Name, "Please enter Name")
                     </td>
-</tr>
+                </tr>
                 <tr>
                     <td>
-                        @Html.Label("Rate")
+                        @Html.Label("GSTNo")
                     </td>
                     <td>
-                        @Html.TextBoxFor(model => model.Rate)
-                        </td>
-                    <tr>
-                        <td>
-                            <div class="cell">
-                            <input type="radio" name="radioGst" value="0" onclick="radioClick(0)"/> 0
-                            <input type="radio" name="radioGst" value="5" onclick="radioClick(5)"/>  5
-                            <input type="radio" name="radioGst" value="12" onclick="radioClick(12)"/>  12
-                            <input type="radio" name="radioGst" value="18" onclick="radioClick(18)"/>  18
-                            <input type="radio" name="radioGst" value="28" onclick="radioClick(28)"/>  28 
-                                </div>
-                        </td>
-                     </tr>
+                        @Html.TextBoxFor(model => model.GSTNo)
+                        @Html.ValidationMessageFor(m => m.GSTNo, "Please enter GSTNo number")
+                    </td>
+                <tr>
                 <tr>
                     <td>
-                        @Html.Label("CGST")
-                    </td><td>
-                     <input asp-for="CGST" type="text" hidden= "hidden"/>
-                     <input type="text" id="hiCGST" readonly="readonly"/>
+                        @Html.Label("ContactNumber")
                     </td>
-</tr>
+                    <td>
+                        @Html.TextBoxFor(model => model.ContactNumber)
 
+                    </td>
                 <tr>
                     <td>
-                    @Html.Label("SGCT")
-                    </td><td>
-    <input asp-for="SGST" type="text" hidden="hidden" />
-    <input type="text" id="hiSGST" readonly="readonly" />
-
-</td>
+                        @Html.Label("Address")
+                    </td>
+                    <td>
+                        @Html.TextAreaFor(m => m.Address)
+                        @Html.ValidationMessageFor(m => m.Address, "Please enter address")
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("EmailId")
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.EmailId)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.Label("Type")
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(m => m.TypeId, new SelectList(Model.Types, "TypeId", "Type"),
+                    "Select Type")
+                        @Html.ValidationMessageFor(m => m.TypeId, "Please select Type")
+                    </td>
                 </tr>
                 <tr></tr>
-                </table>
-                <input type="submit" value="Save" class="btn btn-default" />
-
-}
-            <br>
-            @Html.ActionLink("Back to List", "Index")
-</p>
-    </div>
+            </table>
+            <input type="submit" value="Save" class="btn btn-default" />
+        }
+        <br>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

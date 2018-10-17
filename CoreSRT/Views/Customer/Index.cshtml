@@ -43,7 +43,7 @@
                 @customer.GSTNo
             </td>
             <td>
-                @customer.Type
+                @customer.Types.First(t=>t.TypeId == customer.TypeId).Type
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { Id = customer.CustomerId }) | @Html.ActionLink("Delete", "Delete", new { Id = customer.CustomerId }, 

@@ -8,18 +8,21 @@ namespace CoreSRTModels
     public class Bill
     {
         [Key]
+        
         public int BillId { get; set; }
+
+        public int ShopCustomerId { get; set; }
         [Required]
-        public Customer ShopId { get; set; }
+        public Customer Shop { get; set; }
         [Required]
         public DateTime Date { get; set; }
         [Required]
         public int TotalQuantity { get; set; }
         [Required]
         public Double TotalPrice { get; set; }
-        [Required]
+        
         public IList<Payment> Payments { get; set; }
-        [Required]
+        
         public Double OutStandingAmount { get; set; }
     }
 

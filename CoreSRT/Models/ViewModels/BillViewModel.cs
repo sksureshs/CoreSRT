@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace CoreSRT.Models.ViewModels
 {
     public class BillViewModel
@@ -8,15 +10,25 @@ namespace CoreSRT.Models.ViewModels
             get;
             set;
         }
-        public string CustomerName
+
+        public CustomerViewModel Customer
         {
             get;
             set;
         }
+
         public decimal Total
         {
             get;
             set;
         }
+
+        public IList<BillingItemViewModel> BillingItems { get; set; }
+
+        public IList<CustomerViewModel> Customers { get; set; }
+
+        public int CustomerId { get; set; }
+
+        public IList<ItemViewModel> Items { get; set; }
     }
 }

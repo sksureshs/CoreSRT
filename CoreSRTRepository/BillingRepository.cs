@@ -27,6 +27,11 @@ namespace CoreSRTRepository
             modelBuilder.Entity<Customer>().ToTable("Customers");
             modelBuilder.Entity<Bill>().ToTable("Bills");
 
+            modelBuilder.Entity<Bill>()
+                        .Property(p => p.BillId).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<Bill>().HasOne(b => b.Shop).WithOne().HasForeignKey<Customer>(c=>c.CustomerId);
+
             base.OnModelCreating(modelBuilder);
         }
 
@@ -60,9 +65,9 @@ namespace CoreSRTRepository
             SaveChanges();
         }
 
-        public async Task<Item> GetItemAsync(int itemId)
+        public Item GetItem(int itemId)
         {
-            return await Items.SingleAsync(i => i.ItemId == itemId);
+            return Items.Single(i => i.ItemId == itemId);
         }
 
         public IEnumerable<Item> GetAllItems()
@@ -82,7 +87,7 @@ namespace CoreSRTRepository
         {
             var customer = Customers.First(c => c.CustomerId == customerId);
 
-            if(customer == null)
+            if (customer == null)
             {
                 throw new Exception($"Customer {customerId} not present!");
             }
@@ -93,6 +98,19 @@ namespace CoreSRTRepository
 
         public void UpdateCustomer(int customerId, Customer customer)
         {
+            var oldCustomer = Customers.Find(customerId);
+            if (oldCustomer == null)
+            {
+                throw new Exception($"Customer {customerId} not present!");
+            }
+
+            oldCustomer.Address = customer.Address;
+            oldCustomer.ContactNumber = customer.ContactNumber;
+            oldCustomer.EmailId = customer.EmailId;
+            oldCustomer.GSTNo = customer.GSTNo;
+            oldCustomer.Name = customer.Name;
+            oldCustomer.Type = customer.Type;
+
             SaveChanges();
         }
 
@@ -106,6 +124,41 @@ namespace CoreSRTRepository
             return Customers.First(c => c.CustomerId == customerId);
         }
 
+
+
+        #endregion
+
+        #region "Billing"
+        public int CreateBill(Bill bill, IList<BillingItem> billingItems)
+        {
+            Bills.Add(bill);
+            foreach(var item in billingItems)
+            {
+                item.Bill = bill;
+                BillingItems.Add(item);
+            }
+            SaveChanges();
+
+            return bill.BillId;
+        }
+
+        public Bill GetBill(int billNo)
+        {
+            var bill =  Bills.First(b => b.BillId == billNo);
+            bill.Shop = Customers.Single(c => c.CustomerId == bill.ShopCustomerId);
+            return bill;
+        }
+
+        public IEnumerable<BillingItem>GetBillingItems(int billNo)
+        {
+             var temp = BillingItems.Where(b => b.Bill.BillId == billNo);
+            foreach(var r in temp)
+            {
+                r.Item = Items.Single(i => i.ItemId == r.ItemId);
+            }
+            
+            return temp;
+        }
         #endregion
 
     }

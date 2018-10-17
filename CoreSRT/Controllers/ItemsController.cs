@@ -58,7 +58,7 @@ namespace CoreSRT.Controllers
         {
             if (id.HasValue)
             {
-                var item = Map(_billingContext.GetItemAsync(id.Value).Result);
+                var item = Map(_billingContext.GetItem(id.Value));
 
                 return View(item);
             }

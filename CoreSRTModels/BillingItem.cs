@@ -10,6 +10,10 @@ namespace CoreSRTModels
         [Key]
         public int BillingItmeId { get; set; }
         [Required]
+        public Bill Bill { get; set; }
+
+        public int ItemId { get; set; }
+        [Required]
         public Item Item { get; set; }
         [Required]
         public double OriginalPrice { get; set; }
@@ -18,7 +22,7 @@ namespace CoreSRTModels
         [Required]
         public double CGST { get; set; }
         [Required]
-        public double SGCT { get; set; }
+        public double SGST { get; set; }
         [Required]
         public int Quantity { get; set; }
         [Required]

@@ -24,21 +24,25 @@ namespace CoreSRT.Controllers
         [HttpPost]
         public IActionResult Create(CustomerViewModel customerViewModel)
         {
-            var customer = Map(customerViewModel);
-            _billingContext.CreateCustomer(customer);
-            return Redirect("Index");
+            if (ModelState.IsValid)
+            {
+                var customer = Map(customerViewModel);
+                _billingContext.CreateCustomer(customer);
+                return Redirect("Index");
+            }
+            return View(customerViewModel);
         }
 
         public IActionResult Create()
         {
-            return View();
+            return View(new CustomerViewModel());
         }
 
         public IActionResult Delete(int? id)
         {
             if (id.HasValue)
             {
-                _billingContext.DeleteItem(id.Value);
+                _billingContext.DeleteCustomer(id.Value);
             }
 
             return Index();
@@ -66,11 +70,15 @@ namespace CoreSRT.Controllers
         [HttpPost]
         public IActionResult Edit(int id, CustomerViewModel customerViewModel)
         {
+            if (ModelState.IsValid)
+            {
+                var customer = Map(customerViewModel);
+                customer.CustomerId = id;
+                _billingContext.UpdateCustomer(id, customer);
 
-            var customer = Map(customerViewModel);
-            customer.CustomerId = id;
-            _billingContext.UpdateCustomer(id, customer);
-            return Redirect("Index");
+                return Redirect("Index");
+            }
+            return View(customerViewModel);
         }
 
         private CustomerViewModel Map(Customer customer)
@@ -84,7 +92,7 @@ namespace CoreSRT.Controllers
                 GSTNo = customer.GSTNo,
                 Name = customer.Name,
                 TypeId = (int)customer.Type,
-                Type = customer.Type.ToString()
+
             };
         }
 

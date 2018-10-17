@@ -1,0 +1,156 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using CoreSRT.Models.ViewModels
+
+<link rel="stylesheet" type="text/css" href="print.css" />
+<script type="text/javascript">
+function PrintDoc() {
+
+        var toPrint = document.getElementById('billPrintArea');
+
+        var popupWin = window.open('', '_blank', 'width=350,height=150,location=no,left=200px');
+
+        popupWin.document.open();
+
+        popupWin.document.write('
+<html>
+<title>::Preview::</title>
+<link rel="stylesheet" type="text/css" href="print.css" /></head>
+<body onload="window.print()">
+    ')
+
+    popupWin.document.write(toPrint.innerHTML);
+
+    popupWin.document.write('
+</html>');
+
+        popupWin.document.close();
+
+    }
+    </script>
+@model BillPrintViewModel
+
+<div id="billPrintArea" class="table" style="border: 1px dotted black; width: 1000px; align-content:center">
+    <div class="row" style="border: 1px dotted black; width: 1000px; padding-left:5px">
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+            <h4>TAX INVOICE</h4>
+        </div>
+        <div class="col-sm-3">
+            </br>
+            Invoice No:@Model.BillNo
+            </br>
+            Date: @Model.BillDate.ToShortDateString()
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <h5>@Model.Seller.Name</h5>
+            @Model.Seller.Address
+            <p>GSTIN:: @Model.Seller.GSTNo</p>
+        </div>
+        <div class="col-sm-3">
+
+        </div>
+        <div class="col-sm-3">
+            <h5>@Model.Buyer.Name</h5>
+            @Model.Buyer.Address
+            <p>GSTIN:: @Model.Buyer.GSTNo</p>
+        </div>
+    </div>
+    <div claas="row">
+        <div class="col-sm-1">
+            ItemNo
+        </div>
+        <div class="col-sm-2">
+            Name
+        </div>
+        <div class="col-sm-1">
+            Price
+        </div>
+        <div class="col-sm-1">
+            CGST%
+        </div>
+        <div class="col-sm-1">
+            SGST%
+        </div>
+        <div class="col-sm-1">
+            CGST
+        </div>
+        <div class="col-sm-1">
+            SGST
+        </div>
+        <div class="col-sm-1">
+            Quantity
+        </div>
+        <div class="col-sm-1">
+            Total
+        </div>
+    </div>
+    <br>
+    @for (int i = 0; i < Model.Items.Count; i++)
+    {
+        <div class="row" style="border: 1px dotted black;">
+            <div class="col-sm-1">
+                @(i + 1)
+            </div>
+            <div class="col-sm-2">
+                @Model.Items[i].Description
+            </div>
+            <div class="col-sm-1">
+                @Model.Items[i].Price
+            </div>
+            <div class="col-sm-1">
+                @Model.Items[i].CGST
+            </div>
+            <div class="col-sm-1">
+
+                @Model.Items[i].SGST
+            </div>
+            <div class="col-sm-1">
+                @Model.Items[i].CGSTAmount
+            </div>
+            <div class="col-sm-1">
+                @Model.Items[i].SGSTAmount
+            </div>
+            <div class="col-sm-1">
+                @Model.Items[i].Quantity
+            </div>
+            <div class="col-sm-1">
+                @Model.Items[i].TotalPrice
+            </div>
+        </div>
+    }
+    <br>
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-2">
+            Total Quanity
+        </div>
+        <div class="col-sm-2">
+            @Model.TotalQuantity
+        </div>
+        <div class="col-sm-2">
+            Total Amount
+        </div>
+        <div class="col-sm-2">
+            @Model.TotalAmount
+        </div>
+    </div>
+
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row">
+        <div class="col-sm-2">
+            <p style="align-self:flex-end">For @Model.Seller.Name</p>
+        </div>
+    </div>
+    <input id="btn" class="btn-print" type="button" onclick="PrintDoc()">
+</div>
+
