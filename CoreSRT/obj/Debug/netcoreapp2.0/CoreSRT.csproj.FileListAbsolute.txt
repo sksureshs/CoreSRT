@@ -29,3 +29,19 @@ F:/VSC/CoreWeb/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.0/CoreSRTRepository.pdb
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.csproj.CopyComplete
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.dll
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.0/CoreSRT.pdb
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.deps.json
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.runtimeconfig.json
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.runtimeconfig.dev.json
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.dll
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRT.pdb
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTModels.dll
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTRepository.dll
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTModels.pdb
+D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.0\CoreSRTRepository.pdb
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.csprojAssemblyReference.cache
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.csproj.CoreCompileInputs.cache
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.AssemblyInfoInputs.cache
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.AssemblyInfo.cs
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.csproj.CopyComplete
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.dll
+D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.0\CoreSRT.pdb

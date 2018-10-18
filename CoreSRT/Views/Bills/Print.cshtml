@@ -33,7 +33,7 @@ function PrintDoc() {
     </script>
 @model BillPrintViewModel
 
-<div id="billPrintArea" class="table" style="border: 1px dotted black; width: 1000px; align-content:center">
+<div id="billPrintArea" class="container">
     <div class="row" style="border: 1px dotted black; width: 1000px; padding-left:5px">
         <div class="col-sm-3">
 
@@ -42,9 +42,9 @@ function PrintDoc() {
             <h4>TAX INVOICE</h4>
         </div>
         <div class="col-sm-3">
-            </br>
+            <br>
             Invoice No:@Model.BillNo
-            </br>
+            <br>
             Date: @Model.BillDate.ToShortDateString()
         </div>
     </div>
@@ -127,7 +127,7 @@ function PrintDoc() {
         </div>
     }
     <br>
-    <div class="row">
+    <div class="row panel-footer">
         <div class="col-sm-2">
         </div>
         <div class="col-sm-2">
@@ -148,9 +148,11 @@ function PrintDoc() {
     <div class="row"></div>
     <div class="row">
         <div class="col-sm-2">
-            <p style="align-self:flex-end">For @Model.Seller.Name</p>
+            <span class="caption glyphicon-align-right">For @Model.Seller.Name</span>
         </div>
     </div>
-    <input id="btn" class="btn-print" type="button" onclick="PrintDoc()">
+    <button id="btnPrint" onclick="PrintDoc()">
+        <span class="glyphicon-print">Print</span>
+    </button>
 </div>
 

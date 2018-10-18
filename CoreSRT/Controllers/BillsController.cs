@@ -52,7 +52,20 @@ namespace CoreSRT.Controllers
 
         public ActionResult Index()
         {
-            return null;
+            var model = new List<BillIndexViewModel>();
+            model.AddRange(_billingContext.GetBills().Select(Map).ToList());
+            return View(model);
+        }
+
+        private BillIndexViewModel Map(Bill bill)
+        {
+            return new BillIndexViewModel
+            {
+                BillId = bill.BillId,
+                TotalAmount = bill.TotalPrice,
+                Customer = bill.Shop.Name,
+                TotalQuantity = bill.TotalQuantity
+            };
         }
 
         public ActionResult AddItemNew(BillViewModel model)
@@ -78,6 +91,16 @@ namespace CoreSRT.Controllers
             model.Items = _billingContext.GetAllItems().Select(Map).ToList();
 
             return PartialView("BillingItemViewModel", model);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                _billingContext.DeleteBill(id);
+            }
+
+            return Index();
         }
 
         private BillPrintViewModel GetPrintViewModel(Bill bill, IList<BillingItem>billingItems)
@@ -206,5 +229,6 @@ namespace CoreSRT.Controllers
             };
         }
 
+       
     }
 }

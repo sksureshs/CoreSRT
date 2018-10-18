@@ -129,6 +129,26 @@ namespace CoreSRTRepository
         #endregion
 
         #region "Billing"
+
+        public void DeleteBill(int billId)
+        {
+            var billingItems = BillingItems.Where(b => b.Bill.BillId == billId).ToList();
+
+            if (!billingItems.Any())
+            {
+                BillingItems.RemoveRange(billingItems);
+            }
+
+            var bill = Bills.Single(b => b.BillId == billId);
+            if (bill == null)
+            {
+                throw new Exception($"Not able find the bill for billId {billId}");
+            }
+
+            Bills.Remove(bill);
+
+            SaveChanges();
+        }
         public int CreateBill(Bill bill, IList<BillingItem> billingItems)
         {
             Bills.Add(bill);
@@ -149,15 +169,27 @@ namespace CoreSRTRepository
             return bill;
         }
 
+        public IEnumerable<Bill> GetBills()
+        {
+            foreach (var bill in Bills)
+            {
+                if (bill.Shop == null)
+                {
+                    bill.Shop = Customers.Single(c => c.CustomerId == bill.ShopCustomerId);
+                }
+            }
+            return Bills;
+        }
+
         public IEnumerable<BillingItem>GetBillingItems(int billNo)
         {
-             var temp = BillingItems.Where(b => b.Bill.BillId == billNo);
-            foreach(var r in temp)
+            var billingItems = BillingItems.Where(b => b.Bill.BillId == billNo);
+            foreach(var r in billingItems)
             {
                 r.Item = Items.Single(i => i.ItemId == r.ItemId);
             }
             
-            return temp;
+            return billingItems;
         }
         #endregion
 

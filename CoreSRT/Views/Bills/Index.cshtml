@@ -3,3 +3,52 @@
 *@
 @{
 }
+
+@using CoreSRT.Models.ViewModels
+
+@model List<BillIndexViewModel>
+
+<table class ="table-bordered">
+    <thead>
+        <tr>
+            <td>
+                Bill No
+            </td>
+            <td>
+                Customer
+            </td>
+            <td>
+                Total Quantity
+            </td>
+            <td>
+                Total Amount
+            </td>
+            <td>
+                Actions
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="table-cell">
+                @item.BillId
+            </td>
+            <td>
+                @item.Customer
+            </td>
+            <td>
+                @item.TotalQuantity
+            </td>
+            <td>
+                @item.TotalAmount
+            </td>
+            <td>
+                @Html.ActionLink("Print", "Print", new { Id = @item.BillId }) | @Html.ActionLink("Delete", "Delete", new { Id = @item.BillId }, 
+                    new { onclick ="return confirm('Do you really want to delete this Bill?')" })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -61,17 +61,21 @@
         <tfoot>
             <tr>
                 <td>
-                    @Html.ActionLink("Add New Item", "AddItemNew" , new { model = Model})
-                </td>
-                <td>
                     <input id="btnAdd" class="btnAdd btn btn-default" type="button" name="name" value="Add" />
                 </td>
-                <td>
-                    <input id="btnSubmit" type="button" value="Generate Bill" class="btn btn-default" onclick="TestFunction()" />
-                </td>
+
                 <td></td>
                 <td></td>
             </tr>
+        <tr>
+            <td>
+                <input id="btnSubmit" type="button" value="Generate Bill" class="btn btn-default btn-print" onclick="TestFunction()" />
+                <button id="btnSubmit" class="btn btn-success btn-lg" onclick="TestFunction()">
+                    <span class="glyphicon glyphicon-ok"></span> Generate Bill
+                </button>
+                
+            </td>
+        </tr>
         </tfoot>
     </table>
 }

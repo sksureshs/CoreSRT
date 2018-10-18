@@ -25,3 +25,17 @@ F:/VSC/CoreWeb/CoreSRT/CoreSRTRepository/bin/Debug/netcoreapp2.0/CoreSRTReposito
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Debug/netcoreapp2.0/CoreSRTRepository.csproj.CopyComplete
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Debug/netcoreapp2.0/CoreSRTRepository.dll
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Debug/netcoreapp2.0/CoreSRTRepository.pdb
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.deps.json
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.runtimeconfig.json
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.runtimeconfig.dev.json
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.dll
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTRepository.pdb
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTModels.dll
+D:\Suresh\CoreSRT\CoreSRTRepository\bin\Debug\netcoreapp2.0\CoreSRTModels.pdb
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.csprojAssemblyReference.cache
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.csproj.CoreCompileInputs.cache
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.AssemblyInfoInputs.cache
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.AssemblyInfo.cs
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.csproj.CopyComplete
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.dll
+D:\Suresh\CoreSRT\CoreSRTRepository\obj\Debug\netcoreapp2.0\CoreSRTRepository.pdb
