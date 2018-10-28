@@ -8,79 +8,119 @@
 
 @model BillViewModel
 
+
+<!-- Bootstrap Date-Picker Plugin -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
 <div>
     <p align="center"> <b>Generate Bill</b> </p>
 </div>
 
-@using (Html.BeginForm("Create", "Bills", FormMethod.Post))
-{
 
 
-    <table class="table">
+
+<table class="table">
+    <tr>
+        <td> Select Customer : </td>
+        <td>
+            @Html.DropDownListFor(m => m.CustomerId, new SelectList(Model.Customers, "CustomerId", "Name"), "Select Customer")
+            @Html.ValidationMessageFor(m => m.CustomerId, "Please select a customer!", new { @class = "text-danger" }, "")
+        </td>
+            <td>
+            Date
+            </td>
+            <td>
+                <div class="input-group date" data-provide="datepicker">
+                    <input type="text" class="form-control" id="billDate">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-th"></span>
+                    </div>
+                </div>
+            </td>
+     </tr>
+</table>
+
+<table name="BillingItems" class="table" id="billingItemsTable">
+    <thead>
         <tr>
-            <td> Select Customer : </td>
-            <td> @Html.DropDownListFor(m => m.CustomerId, new SelectList(Model.Customers, "CustomerId", "Name"), "Select Customer")
+
+            <th class="col-md-2">
+                Item
+            </th>
+            <th class="col-md-2">
+                @Html.DisplayNameFor(model => model.BillingItems.First().CGST)%
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().SGST)%
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().OriginalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().SellingPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().TotalPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().CGSTAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().SGSTAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillingItems.First().PerItemPrice)
+            </th>
         </tr>
-    </table>
+    </thead>
+    <tbody class="itemCollections">
+        @for (int i = 0; i < Model.BillingItems.Count; i++)
+        {
 
-    <table name="BillingItems" class="table" id="billingItemsTable">
-        <thead>
-            <tr>
+            @Html.Partial("BillingItemViewModel", Model.BillingItems[i]);
+        }
 
-                <th class="col-md-2">
-                    Item
-                </th>
-                <th class="col-md-2">
-                    @Html.DisplayNameFor(model => model.BillingItems.First().CGST)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BillingItems.First().SGST)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BillingItems.First().OriginalPrice)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BillingItems.First().SellingPrice)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BillingItems.First().Quantity)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.BillingItems.First().TotalPrice)
-                </th>
-            </tr>
-        </thead>
-        <tbody class="itemCollections">
-            @for (int i = 0; i < Model.BillingItems.Count; i++)
-            {
-
-                Html.RenderPartial("BillingItemViewModel", Model.BillingItems[i]);
-            }
-
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>
-                    <input id="btnAdd" class="btnAdd btn btn-default" type="button" name="name" value="Add" />
-                </td>
-
-                <td></td>
-                <td></td>
-            </tr>
+    </tbody>
+    <tfoot>
         <tr>
             <td>
-                <input id="btnSubmit" type="button" value="Generate Bill" class="btn btn-default btn-print" onclick="TestFunction()" />
-                <button id="btnSubmit" class="btn btn-success btn-lg" onclick="TestFunction()">
-                    <span class="glyphicon glyphicon-ok"></span> Generate Bill
+                <button id="btnAdd" class="btnAdd btn btn-info btn-sm" type="button" value="Add">
+                    <span class="glyphicon glyphicon-plus"></span>
                 </button>
-                
             </td>
-        </tr>
-        </tfoot>
-    </table>
-}
 
-    <script type="text/javascript">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+
+<p class="text-center">
+    <button id="btnSubmit" class="btn btn-primary btn-sm" onclick="TestFunction()">
+        <span class="glyphicon glyphicon-ok"></span> Generate Bill
+    </button>
+</p>
+
+
+
+<script type="text/javascript">
+        $(function(){
+                $('.datepicker').datepicker({
+            format: 'dd/mm/yyyy',
+            autoclose: true,
+            todayHighlight: true,
+            startDate: '-3d'
+        })});
+
     $(document).on("click", ".btnAdd", function(){
     var index = $("table#billingItemsTable tbody tr").length + 1;
 
@@ -109,10 +149,12 @@
             o.push(item);
         }
         });
-        o.splice(-1,1);
+
+        //o.splice(-1,1);
 
         var modelJson = new Object();
         modelJson.CustomerId = parseInt($('[id*="CustomerId"]').val());
+        modelJson.BillDate = new Date($('#billDate').val());
         modelJson.Items = o;
 
         var dataJson = JSON.stringify(modelJson);
@@ -125,10 +167,20 @@
              contentType: 'application/json; charset=utf-8',
              data:  dataJson,
              success: function(data1){
-                   window.location.href = '/Bills/print?billNo=' + data1;
+                     var url = data1['RedirectURL'];
+                     var print = confirm('Do you want to Print this Bill?');
+                     if(print == true)
+                     {
+                        window.location.replace(decodeURIComponent(url));
+                     }
+                     else{
+                         window.location.replace('/bills/index');
+                     }
              },
              error: function (a, b, c) {
+                alert('An error Occured! please try again..')
                 console.log(a, b, c);
+                window.location.replace('/bills/create');
             }
         });
     }
@@ -150,4 +202,4 @@
 })(jQuery);
 
 
-    </script>
+</script>

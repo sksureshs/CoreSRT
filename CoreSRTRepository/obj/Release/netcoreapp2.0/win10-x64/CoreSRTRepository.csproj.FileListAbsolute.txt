@@ -1,0 +1,14 @@
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.runtimeconfig.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.runtimeconfig.dev.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.csprojAssemblyReference.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.csproj.CopyComplete
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/win10-x64/CoreSRTRepository.pdb

@@ -1,0 +1,8 @@
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/bin/Release/netcoreapp2.0/win10-x64/CoreSRTService.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/bin/Release/netcoreapp2.0/win10-x64/CoreSRTService.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/bin/Release/netcoreapp2.0/win10-x64/CoreSRTService.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Release/netcoreapp2.0/win10-x64/CoreSRTService.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Release/netcoreapp2.0/win10-x64/CoreSRTService.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Release/netcoreapp2.0/win10-x64/CoreSRTService.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Release/netcoreapp2.0/win10-x64/CoreSRTService.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/Release/netcoreapp2.0/win10-x64/CoreSRTService.pdb

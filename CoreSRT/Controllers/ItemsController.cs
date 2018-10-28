@@ -38,18 +38,26 @@ namespace CoreSRT.Controllers
 
         public IActionResult Delete(int? id)
         {
-            if (id.HasValue)
+            if (ModelState.IsValid && id!= null)
             {
-                _billingContext.DeleteItem(id.Value);
+                if (id.HasValue)
+                {
+                    _billingContext.DeleteItem(id.Value);
+                }
             }
-
+            else
+            {
+                ViewData["Error"] = "Invalid Model State";
+            }
             return Index();
+
+
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            var items = _billingContext.GetAllItems().Select(Map).ToList();
+            var items = _billingContext.GetAllItems().Where(i => i.DateTo >= DateTime.Now).Select(Map).ToList();
 
             return View("Index", items);
         }

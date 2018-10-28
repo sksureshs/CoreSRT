@@ -7,48 +7,61 @@
 @using CoreSRT.Models.ViewModels
 
 @model List<BillIndexViewModel>
+<br>
+<br>
+<div class="container">
+    <p class="text-right"><span class="btn btn-info">@Html.ActionLink("Create New","Create")</span></p>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-1"></div>
+             <div class="col-sm-1">
+                 <p class="text-center">Bill No</p>
+</div>
+             <div class="col-sm-2">
+                 <p class="text-center">Customer</p>
+                 </div>
+                 <div class="col-sm-2">
+                     <p class="text-center">Total Quantity</p>
+</div>
+                 <div class="col-sm-2">
+                     <p class="text-center">Total Amount</p>
+</div>
+                 <div class="col-sm-2">
+                     <p class="text-center">Actions</p>
+</div>
 
-<table class ="table-bordered">
-    <thead>
-        <tr>
-            <td>
-                Bill No
-            </td>
-            <td>
-                Customer
-            </td>
-            <td>
-                Total Quantity
-            </td>
-            <td>
-                Total Amount
-            </td>
-            <td>
-                Actions
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td class="table-cell">
-                @item.BillId
-            </td>
-            <td>
-                @item.Customer
-            </td>
-            <td>
-                @item.TotalQuantity
-            </td>
-            <td>
-                @item.TotalAmount
-            </td>
-            <td>
-                @Html.ActionLink("Print", "Print", new { Id = @item.BillId }) | @Html.ActionLink("Delete", "Delete", new { Id = @item.BillId }, 
-                    new { onclick ="return confirm('Do you really want to delete this Bill?')" })
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+                     </div>
+            </div>
+        <div class=" panel-body hoverable" style="max-height: 500px;overflow-y: scroll;">
+            @foreach (var item in Model)
+            {
+            <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+
+            <p class="text-center">@item.BillId
+</div>
+        <div class="col-sm-2">
+            <p class="text-center"> @item.Customer
+</div>
+        <div class="col-sm-2">
+            <p class="text-center">@item.TotalQuantity
+</div>
+        <div class="col-sm-2">
+            <p class="text-center">@item.TotalAmount
+</div>
+        <div class="col-sm-2">
+            <p class="text-center">
+                @Html.ActionLink("", "Edit", new { billNo = @item.BillId }, new { @class = "glyphicon glyphicon-edit" }) |  @Html.ActionLink("", "Print", new { billNo = @item.BillId }, new { @class = "glyphicon glyphicon-print" }) | @Html.ActionLink("", "Delete", new { Id = @item.BillId },
+new { onclick = "return confirm('Do you really want to delete this Bill?')", @class = "glyphicon glyphicon-remove", @style="color:red" })
+            </p>
+</div>
+          <br>
+                <br>
+           
+            }
+         </div>
+
+        </div>
+        </div>
+    

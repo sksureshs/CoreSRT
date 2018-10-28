@@ -8,7 +8,7 @@ namespace CoreSRTModels
     public class BillingItem
     {
         [Key]
-        public int BillingItmeId { get; set; }
+        public int BillingItemId { get; set; }
         [Required]
         public Bill Bill { get; set; }
 
@@ -27,5 +27,8 @@ namespace CoreSRTModels
         public int Quantity { get; set; }
         [Required]
         public double TotalPrice { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
     }
 }

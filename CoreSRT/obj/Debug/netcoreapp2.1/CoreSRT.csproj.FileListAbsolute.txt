@@ -1,44 +1,90 @@
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.csprojAssemblyReference.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.csproj.CoreCompileInputs.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.RazorAssemblyInfo.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.RazorAssemblyInfo.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.AssemblyInfoInputs.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.AssemblyInfo.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.TagHelpers.input.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.TagHelpers.output.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.RazorCoreGenerate.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Bills\BillingItemViewModel.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Bills\Create.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Bills\Index.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Bills\Print.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Create.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Edit.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Customer\Index.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Items\Create.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Items\Edit.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Items\Index.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.RazorTargetAssemblyInfo.cache
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.RazorTargetAssemblyInfo.cs
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.dll
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.pdb
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.deps.json
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.runtimeconfig.json
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.runtimeconfig.dev.json
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.dll
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.pdb
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.Views.dll
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRT.Views.pdb
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRTModels.dll
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRTRepository.dll
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRTModels.pdb
-D:\Suresh\CoreSRT\CoreSRT\bin\Debug\netcoreapp2.1\CoreSRTRepository.pdb
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.Views.pdb
-D:\Suresh\CoreSRT\CoreSRT\obj\Debug\netcoreapp2.1\CoreSRT.csproj.CopyComplete
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.csprojAssemblyReference.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.csproj.CoreCompileInputs.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorAssemblyInfo.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorAssemblyInfo.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.AssemblyInfoInputs.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.AssemblyInfo.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.TagHelpers.input.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.TagHelpers.output.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorCoreGenerate.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/BillingItemViewModel.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Create.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Index.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Print.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Customer/Create.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Customer/Edit.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Customer/Index.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Home/About.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Home/Contact.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Items/Create.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Items/Edit.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Items/Index.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/_ViewStart.g.cshtml.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorTargetAssemblyInfo.cache
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorTargetAssemblyInfo.cs
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.dll
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.pdb
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.deps.json
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.runtimeconfig.json
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.runtimeconfig.dev.json
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.dll
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.pdb
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.Views.dll
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.Views.pdb
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTModels.dll
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTRepository.dll
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTModels.pdb
+D:/Suresh/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTRepository.pdb
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.Views.pdb
+D:/Suresh/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.csproj.CopyComplete
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.runtimeconfig.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.runtimeconfig.dev.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.Views.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRT.Views.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTModels.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTRepository.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTModels.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/bin/Debug/netcoreapp2.1/CoreSRTRepository.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.csprojAssemblyReference.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorAssemblyInfo.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorAssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.TagHelpers.input.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.TagHelpers.output.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorCoreGenerate.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/BillingItemViewEdit.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/BillingItemViewModel.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Create.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Edit.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Index.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Bills/Print.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Customer/Create.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Customer/Edit.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Customer/Index.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Home/About.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Home/Contact.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Home/Index.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Items/Create.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Items/Edit.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Items/Index.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Shared/Error.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_Layout.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_ValidationScriptsPartial.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/_ViewImports.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/Razor/Views/_ViewStart.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorTargetAssemblyInfo.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.RazorTargetAssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.Views.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.csproj.CopyComplete
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Debug/netcoreapp2.1/CoreSRT.pdb

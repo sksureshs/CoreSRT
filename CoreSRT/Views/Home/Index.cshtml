@@ -105,12 +105,35 @@
     </div>
 </div>
     -->
+<div class="container">
+    <br>
+    <br>
+<div class="panel panel-primary">
 
-<div class="row">
-    <div class="col-md-3">
-        <h2>Items</h2>
+    <table class="table" style="align-content:center">
+        <thead>
+            <tr>
+                <td>
+                    <p class="text-uppercase"><span class="btn btn-default btn-lg btn-block">Sree Ranga Traders</span></p>
+                    </td>
+                </tr>
+            </thead>
+        <tr>
+            <td>
+
+                <a asp-area="" asp-controller="Items" asp-action="Index"><p class="text-uppercase"><span class="btn btn-primary btn-lg btn-block">Items</span></p></a>
+                </td>
+            </tr>
+        <tr>
+            <td>
+                    <a asp-area="" asp-controller="Customer" asp-action="Index"><p class="text-uppercase"><span class="btn btn-primary btn-lg btn-block">Customer</span></p></a>
+                </td>
+            </tr>
+        <tr>
+            <td>
+                    <a asp-area="" asp-controller="Bills" asp-action="Index"><p class="text-uppercase"><span class="btn btn-primary btn-lg btn-block">Bills</span></p></a>
+                </td>
+        </tr>
+        </table>
     </div>
-    <div class="col-md-3">
-        <h2>@Html.ActionLink("","")</h2>
-        </div>
     </div>

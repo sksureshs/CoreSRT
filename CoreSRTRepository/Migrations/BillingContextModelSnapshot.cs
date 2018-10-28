@@ -14,7 +14,7 @@ namespace CoreSRTRepository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("CoreSRTModels.AccountDetails", b =>
@@ -41,6 +41,8 @@ namespace CoreSRTRepository.Migrations
                     b.Property<int>("BillId")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("CreatedDate");
+
                     b.Property<DateTime>("Date");
 
                     b.Property<double>("OutStandingAmount");
@@ -51,6 +53,8 @@ namespace CoreSRTRepository.Migrations
 
                     b.Property<int>("TotalQuantity");
 
+                    b.Property<DateTime>("UpdatedDate");
+
                     b.HasKey("BillId");
 
                     b.HasIndex("ShopCustomerId");
@@ -58,14 +62,42 @@ namespace CoreSRTRepository.Migrations
                     b.ToTable("Bills");
                 });
 
+            modelBuilder.Entity("CoreSRTModels.BillingAudit", b =>
+                {
+                    b.Property<int>("BillingAutiId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BillId");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<DateTime>("Date");
+
+                    b.Property<double>("OutStandingAmount");
+
+                    b.Property<int>("ShopCustomerId");
+
+                    b.Property<double>("TotalPrice");
+
+                    b.Property<int>("TotalQuantity");
+
+                    b.HasKey("BillingAutiId");
+
+                    b.HasIndex("ShopCustomerId");
+
+                    b.ToTable("BillingAudit");
+                });
+
             modelBuilder.Entity("CoreSRTModels.BillingItem", b =>
                 {
-                    b.Property<int>("BillingItmeId")
+                    b.Property<int>("BillingItemId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("BillId");
 
                     b.Property<double>("CGST");
+
+                    b.Property<DateTime>("CreatedDate");
 
                     b.Property<int>("ItemId");
 
@@ -79,13 +111,45 @@ namespace CoreSRTRepository.Migrations
 
                     b.Property<double>("TotalPrice");
 
-                    b.HasKey("BillingItmeId");
+                    b.Property<DateTime>("UpdatedDate");
+
+                    b.HasKey("BillingItemId");
 
                     b.HasIndex("BillId");
 
                     b.HasIndex("ItemId");
 
                     b.ToTable("BillingItems");
+                });
+
+            modelBuilder.Entity("CoreSRTModels.BillingItemAudit", b =>
+                {
+                    b.Property<int>("BillingItemAuditId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("BillId");
+
+                    b.Property<int>("BillingItemId");
+
+                    b.Property<double>("CGST");
+
+                    b.Property<DateTime>("CreatedDate");
+
+                    b.Property<int>("ItemId");
+
+                    b.Property<double>("OriginalPrice");
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<double>("SGST");
+
+                    b.Property<double>("SellingPrice");
+
+                    b.Property<double>("TotalPrice");
+
+                    b.HasKey("BillingItemAuditId");
+
+                    b.ToTable("BillingItemAudit");
                 });
 
             modelBuilder.Entity("CoreSRTModels.Customer", b =>
@@ -183,6 +247,14 @@ namespace CoreSRTRepository.Migrations
                 });
 
             modelBuilder.Entity("CoreSRTModels.Bill", b =>
+                {
+                    b.HasOne("CoreSRTModels.Customer", "Shop")
+                        .WithMany()
+                        .HasForeignKey("ShopCustomerId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CoreSRTModels.BillingAudit", b =>
                 {
                     b.HasOne("CoreSRTModels.Customer", "Shop")
                         .WithMany()

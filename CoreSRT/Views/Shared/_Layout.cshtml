@@ -26,13 +26,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">CoreSRT</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">SRT</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Items" asp-action="Index">Items</a></li>
                     <li><a asp-area="" asp-controller="Customer" asp-action="Index">Customer</a></li>
-                    <li><a asp-area="" asp-controller="Bills" asp-action="Create">Bills</a></li>
+                    <li><a asp-area="" asp-controller="Bills" asp-action="Index">Bills</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
@@ -59,9 +59,15 @@
     </environment>
     <div class="container body-content">
         @RenderBody()
+        <br>
+        <br>
         <hr />
+        <p><span class="error">@ViewData["Error"]</span></p>
         <footer>
+
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
             <p>&copy; 2018 - CoreSRT</p>
+
         </footer>
     </div>
 

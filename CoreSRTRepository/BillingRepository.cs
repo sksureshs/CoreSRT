@@ -20,17 +20,33 @@ namespace CoreSRTRepository
         public DbSet<Bill> Bills { get; set; }
         public DbSet<BillingItem> BillingItems { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<BillingAudit> BillingAudits { get; set; }
+        public DbSet<BillingItemAudit> BillingItemAudits { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Item>().ToTable("Items");
             modelBuilder.Entity<Customer>().ToTable("Customers");
             modelBuilder.Entity<Bill>().ToTable("Bills");
+           // modelBuilder.Entity<BillingItem>().ToTable("BillingItems");
 
             modelBuilder.Entity<Bill>()
                         .Property(p => p.BillId).ValueGeneratedOnAdd();
 
-            modelBuilder.Entity<Bill>().HasOne(b => b.Shop).WithOne().HasForeignKey<Customer>(c=>c.CustomerId);
+            modelBuilder.Entity<BillingItem>()
+                        .Property(p => p.BillingItemId).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<BillingAudit>().ToTable("BillingAudit");
+
+            modelBuilder.Entity<BillingAudit>()
+                        .Property(p => p.BillingAutiId).ValueGeneratedOnAdd();
+
+            modelBuilder.Entity<BillingItemAudit>().ToTable("BillingItemAudit");
+
+            modelBuilder.Entity<BillingItemAudit>()
+                        .Property(p => p.BillingItemAuditId).ValueGeneratedOnAdd();
+
+            //modelBuilder.Entity<Bill>().HasOne(b => b.Shop).WithOne().HasForeignKey<Customer>(c=>c.CustomerId);
 
             base.OnModelCreating(modelBuilder);
         }
@@ -59,6 +75,7 @@ namespace CoreSRTRepository
             if (oldItem != null)
             {
                 oldItem.DateTo = DateTime.Now;
+
             }
             item.ItemId = 0;
             Items.Add(item);
@@ -72,7 +89,7 @@ namespace CoreSRTRepository
 
         public IEnumerable<Item> GetAllItems()
         {
-            var temp = Items.ToListAsync().Result.Where(i => i.DateTo >= DateTime.Now);
+            var temp = Items.ToListAsync().Result;
             return temp;
         }
 
@@ -149,17 +166,121 @@ namespace CoreSRTRepository
 
             SaveChanges();
         }
-        public int CreateBill(Bill bill, IList<BillingItem> billingItems)
+
+        private BillingAudit Map(Bill bill)
         {
-            Bills.Add(bill);
-            foreach(var item in billingItems)
+            return new BillingAudit
             {
-                item.Bill = bill;
-                BillingItems.Add(item);
+                BillId = bill.BillId,
+                CreatedDate = DateTime.Now,
+                Date = bill.Date,
+                OutStandingAmount = bill.OutStandingAmount,
+                ShopCustomerId = bill.ShopCustomerId,
+                TotalPrice = bill.TotalPrice,
+                TotalQuantity = bill.TotalQuantity
+            };
+        }
+
+        private BillingItemAudit Map(BillingItem billingItem)
+        {
+            return new BillingItemAudit
+            {
+                BillingItemId = billingItem.BillingItemId,
+                CGST = billingItem.CGST,
+                SGST = billingItem.SGST,
+                ItemId = billingItem.ItemId,
+                OriginalPrice = billingItem.OriginalPrice,
+                SellingPrice = billingItem.SellingPrice,
+                Quantity = billingItem.Quantity,
+                CreatedDate = DateTime.Now,
+                BillId = billingItem.Bill.BillId
+            };
+        }
+
+        public int UpdateBill (Bill bill, IList<BillingItem> billingItems)
+        {
+            try{
+                var oldbill = Bills.Single(b=>b.BillId == bill.BillId);
+
+                if(oldbill == null)
+                {
+                    throw new Exception("Bill not available");
+                }
+
+                BillingAudits.Add(Map(oldbill));
+                oldbill.OutStandingAmount = bill.OutStandingAmount;
+                oldbill.Date = bill.Date;
+                oldbill.UpdatedDate = bill.UpdatedDate;
+                oldbill.ShopCustomerId = bill.ShopCustomerId;
+                oldbill.TotalPrice = bill.TotalPrice;
+                oldbill.TotalQuantity = bill.TotalQuantity;
+                
+
+                SaveChanges();
+
+                foreach (var newItem in billingItems)
+                {
+                    var oldItem = BillingItems.FirstOrDefault(bi => bi.BillingItemId == newItem.BillingItemId);
+                    var temp = BillingItems.First();
+
+                    if(oldItem == null)
+                    {
+                        newItem.Bill = oldbill;
+                        newItem.CreatedDate = DateTime.Now;
+                        BillingItems.Add(newItem);
+                        SaveChanges();
+                    }
+                    else
+                    {
+                        BillingItemAudits.Add(Map(oldItem));
+                        oldItem.CGST = newItem.CGST;
+                        oldItem.SGST = newItem.SGST;
+                        oldItem.ItemId = newItem.ItemId;
+                        oldItem.OriginalPrice = newItem.OriginalPrice;
+                        oldItem.SellingPrice = newItem.SellingPrice;
+                        oldItem.Quantity = newItem.Quantity;
+                        oldItem.TotalPrice = newItem.TotalPrice;
+                        oldItem.UpdatedDate = DateTime.Now;
+                        oldItem.Bill = bill;
+                        BillingItems.Add(oldItem);
+                        SaveChanges();
+                    }
+                }
+
+
             }
-            SaveChanges();
+            catch (Exception ex)
+            {
+                return 0;
+            }
 
             return bill.BillId;
+        }
+        public int CreateBill(Bill bill, IList<BillingItem> billingItems)
+        {
+            try
+            {
+                bill.CreatedDate = DateTime.Now;
+                Bills.Add(bill);
+                SaveChanges();
+                foreach (var item in billingItems)
+                {
+                    //item.BillingItemId = 0;
+                    item.CreatedDate = DateTime.Now;
+                    
+                    item.Bill = bill;
+                    BillingItems.Add(item);
+                }
+
+                SaveChanges();
+
+                return bill.BillId;
+            }catch(Exception ex)
+            {
+                throw;
+            }
+            return 0;
+                
         }
 
         public Bill GetBill(int billNo)

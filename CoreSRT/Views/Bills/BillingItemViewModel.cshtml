@@ -10,15 +10,18 @@
 
 <tr>
     
-        <td class="col-xs-2">
-        @Html.DropDownListFor(m => m.BillingItemId, new SelectList(Model.Items,
-                       "Id", "Description"), "Select Item", new {onchange = "ChangeItem(" + Model.Index + ")"})
+    <td class="col-xs-2">
+        @Html.DropDownListFor(m => m.ItemId, new SelectList(Model.Items,
+                         "Id", "Description"), "Select Item", new { onchange = "ChangeItem(" + Model.Index + ")" })
+        @Html.ValidationMessageFor(m => m.ItemId)
 
+        @Html.HiddenFor(m => m.BillingItemId)
 
-            <input id="m.Index" hidden="hidden">
+    <input id="m.Index" hidden="hidden">
     </td>
         <td class="col-md-2">
             @Html.TextBoxFor(m => m.CGST, new { @readonly = "readonly", @style = "width:40px"  })
+
 
         </td>
         <td class="col-md-2" width="10ppx">
@@ -39,16 +42,30 @@
         <td>
             @Html.TextBoxFor(m => m.TotalPrice, new { @readonly = "readonly", @style = "width:80px" })
         </td>
+
+        <td>
+            @Html.TextBoxFor(m => m.CGSTAmount, new { @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.SGSTAmount, new { @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.PerItemPrice, new { @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+        </td>
 </tr>
 
 <script type="text/javascript">
     function ChangeItem(index)
     {
+       console.log(index);
        var items = @{@Html.Raw(Json.Serialize(Model.Items))};
-       var e = $('[id*="BillingItemId"]').val();
+       var e = $('[id*="ItemId"]').val();
+
+       console.log(6);
+
        if(index >0)
        {
-          var tempId= index+'__BillingItemId';
+          var tempId= index+'__ItemId';
           e = $('[id*='+ tempId +']').val();
        }
        for(i=0; i<items.length; i++)
@@ -69,9 +86,23 @@
 
     function ChangeTotalPrice(index)
     {
+        console.log(index);
         var tpPriceId = (index == 0) ?'TotalPrice' : index+'__TotalPrice';
         var selPriceId = (index == 0) ?'SellingPrice' : index+'__SellingPrice';
+        var cgstPerId = (index ==0) ? "CGST" : index+'__CGST';
+        var sgstPerId = (index ==0) ? "SGST" : index+'__SGST';
+
+        var cgstPerAmt = (index ==0) ? "CGSTAmount" : index+'__CGSTAmount';
+        var sgstPerAmt = (index ==0) ? "SGSTAmount" : index+'__SGSTAmount';
+        $('[id*='+cgstPerAmt+']').first().val($('[id*='+selPriceId+']').first().val() * $('[id*='+cgstPerId+']').first().val()/100)
+        $('[id*='+sgstPerAmt+']').first().val($('[id*='+selPriceId+']').first().val() * $('[id*='+sgstPerId+']').first().val()/100)
+
+        var perItemPrice = (index == 0)?"PerItemPrice" : index+'__PerItemPrice';
+
+        $('[id*='+perItemPrice+']').first().val(parseInt($('[id*='+selPriceId+']').first().val()) + parseFloat($('[id*='+cgstPerAmt+']').first().val())
+                            + parseFloat($('[id*='+sgstPerAmt+']').first().val()));
+
         var quanId = (index == 0) ?'Quantity' : index+'__Quantity';
-        $('[id*='+tpPriceId+']').first().val($('[id*='+selPriceId+']').first().val()  * $('[id*='+quanId+']').first().val());
+        $('[id*='+tpPriceId+']').first().val($('[id*='+perItemPrice+']').first().val() * $('[id*='+quanId+']').first().val());
     }
 </script>

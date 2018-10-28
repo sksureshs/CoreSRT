@@ -1,0 +1,10 @@
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.runtimeconfig.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.runtimeconfig.dev.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Release/netcoreapp2.0/win10-x64/CoreSRTModels.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Release/netcoreapp2.0/win10-x64/CoreSRTModels.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Release/netcoreapp2.0/win10-x64/CoreSRTModels.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Release/netcoreapp2.0/win10-x64/CoreSRTModels.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Release/netcoreapp2.0/win10-x64/CoreSRTModels.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Release/netcoreapp2.0/win10-x64/CoreSRTModels.pdb

@@ -24,6 +24,10 @@ namespace CoreSRTModels
         public IList<Payment> Payments { get; set; }
         
         public Double OutStandingAmount { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+
+        public DateTime UpdatedDate { get; set; }
     }
 
     public enum BillStatus

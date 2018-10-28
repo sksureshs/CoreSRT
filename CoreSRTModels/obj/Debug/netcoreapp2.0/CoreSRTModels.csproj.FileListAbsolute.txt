@@ -9,6 +9,17 @@ F:/VSC/CoreWeb/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.dll
 F:/VSC/CoreWeb/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.pdb
 F:/VSC/CoreWeb/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runtimeconfig.json
 F:/VSC/CoreWeb/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runtimeconfig.dev.json
+D:/Suresh/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.deps.json
+D:/Suresh/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runtimeconfig.json
+D:/Suresh/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runtimeconfig.dev.json
+D:/Suresh/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.dll
+D:/Suresh/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.pdb
+D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.csprojAssemblyReference.cache
+D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.csproj.CoreCompileInputs.cache
+D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.AssemblyInfoInputs.cache
+D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.AssemblyInfo.cs
+D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.dll
+D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.pdb
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.deps.json
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runtimeconfig.json
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runtimeconfig.dev.json
@@ -19,14 +30,3 @@ F:/VSC/CoreWeb/CoreSRT/CoreSRTModels/bin/Debug/netcoreapp2.0/CoreSRTModels.runti
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.AssemblyInfo.cs
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.dll
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.pdb
-D:\Suresh\CoreSRT\CoreSRTModels\bin\Debug\netcoreapp2.0\CoreSRTModels.deps.json
-D:\Suresh\CoreSRT\CoreSRTModels\bin\Debug\netcoreapp2.0\CoreSRTModels.runtimeconfig.json
-D:\Suresh\CoreSRT\CoreSRTModels\bin\Debug\netcoreapp2.0\CoreSRTModels.runtimeconfig.dev.json
-D:\Suresh\CoreSRT\CoreSRTModels\bin\Debug\netcoreapp2.0\CoreSRTModels.dll
-D:\Suresh\CoreSRT\CoreSRTModels\bin\Debug\netcoreapp2.0\CoreSRTModels.pdb
-D:\Suresh\CoreSRT\CoreSRTModels\obj\Debug\netcoreapp2.0\CoreSRTModels.csprojAssemblyReference.cache
-D:\Suresh\CoreSRT\CoreSRTModels\obj\Debug\netcoreapp2.0\CoreSRTModels.csproj.CoreCompileInputs.cache
-D:\Suresh\CoreSRT\CoreSRTModels\obj\Debug\netcoreapp2.0\CoreSRTModels.AssemblyInfoInputs.cache
-D:\Suresh\CoreSRT\CoreSRTModels\obj\Debug\netcoreapp2.0\CoreSRTModels.AssemblyInfo.cs
-D:\Suresh\CoreSRT\CoreSRTModels\obj\Debug\netcoreapp2.0\CoreSRTModels.dll
-D:\Suresh\CoreSRT\CoreSRTModels\obj\Debug\netcoreapp2.0\CoreSRTModels.pdb

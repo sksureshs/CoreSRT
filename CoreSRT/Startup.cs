@@ -52,7 +52,7 @@ namespace CoreSRT
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Items}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

@@ -3091,30 +3091,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\skumar\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/sureshkumar/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Suresh\\CoreSRT\\CoreSRTModels\\CoreSRTModels.csproj",
+      "projectUniqueName": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/CoreSRTModels.csproj",
       "projectName": "CoreSRTModels",
-      "projectPath": "D:\\Suresh\\CoreSRT\\CoreSRTModels\\CoreSRTModels.csproj",
-      "packagesPath": "C:\\Users\\skumar\\.nuget\\packages\\",
-      "outputPath": "D:\\Suresh\\CoreSRT\\CoreSRTModels\\obj\\",
+      "projectPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/CoreSRTModels.csproj",
+      "packagesPath": "/Users/sureshkumar/.nuget/packages/",
+      "outputPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\skumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/sureshkumar/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

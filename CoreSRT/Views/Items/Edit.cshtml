@@ -6,13 +6,34 @@
 @using CoreSRT.Models.ViewModels
 @model ItemViewModel
 <div>
-    <script>function radioClick(val)
+    <script>
+
+        $(function(){
+               changeRate();
+               var gstPer = $('#hiCGST').val() * 2;
+               $(':radio[value="' +gstPer+'"]').attr('checked', 'checked');
+        });
+
+        function changeRate()
         {
-            $('#CGST').val(val);
-            $('#SGST').val(val);
-            $('#hiCGST').val(val);
-           $('#hiSGST').val(val);
-        }</script>
+            var gstAmt = $('#Rate').val() * ($('#hiCGST').val()/100);
+            $('#cgstAmt').val( gstAmt );
+            $('#sgstAmt').val( gstAmt);
+            $('#totalAmt').val('0');
+            if ($('#Rate').val() != '')
+                $('#totalAmt').val( parseFloat($('#Rate').val()) + (gstAmt * 2));
+        }
+
+        function radioClick(val)
+        {
+            $('#CGST').val(val/2);
+            $('#SGST').val(val/2);
+            $('#hiCGST').val(val/2);
+            $('#hiSGST').val(val/2);
+            changeRate();
+        }
+
+    </script>
     <p align="center"> <b>Edit New Item</b> </p>
 </div>
 
@@ -45,6 +66,7 @@
         <div class="cell">
             <input type="radio" name="radioGst" value="0" onclick="radioClick(0)" /> 0
             <input type="radio" name="radioGst" value="5" onclick="radioClick(5)" />  5
+            <input type="radio" name="radioGst" value="10" onclick="radioClick(10)" />  10
             <input type="radio" name="radioGst" value="12" onclick="radioClick(12)" />  12
             <input type="radio" name="radioGst" value="18" onclick="radioClick(18)" />  18
             <input type="radio" name="radioGst" value="28" onclick="radioClick(28)" />  28
@@ -53,20 +75,30 @@
         </tr>
         <tr>
             <td>
-                @Html.Label("CGST")
+                @Html.Label("CGST") -
+                <input asp-for="CGST" type="text" hidden="hidden" />
+                <input type="text" id="hiCGST" readonly="readonly" value=@Model.CGST />
             </td>
             <td>
-                <input asp-for="CGST" type="text" hidden="hidden" />
-                <input type="text" id="hiCGST" readonly="readonly" value=@Model.CGST>
+                <input type="text" id="cgstAmt" readonly="readonly" />
             </td>
         </tr>
         <tr>
             <td>
-                @Html.Label("SGCT")
+                @Html.Label("SGCT") -
+                <input asp-for="SGST" type="text" hidden="hidden" />
+                <input type="text" id="hiSGST" readonly="readonly" value=@Model.SGST />
             </td>
             <td>
-                <input asp-for="SGST" type="text" hidden="hidden" />
-                <input type="text" id="hiSGST" readonly="readonly" value=@Model.SGST>
+                <input type="text" id="sgstAmt" readonly="readonly" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Total Amount")
+            </td>
+            <td>
+                <input type="text" readonly="readonly" id="totalAmt">
             </td>
         </tr>
         <tr></tr>

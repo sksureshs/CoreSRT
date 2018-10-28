@@ -1,0 +1,14 @@
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTRepository.deps.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTRepository.runtimeconfig.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTRepository.runtimeconfig.dev.json
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTRepository.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTRepository.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTModels.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/bin/Release/netcoreapp2.0/CoreSRTModels.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.csprojAssemblyReference.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.csproj.CoreCompileInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.AssemblyInfoInputs.cache
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.AssemblyInfo.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.csproj.CopyComplete
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.dll
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/obj/Release/netcoreapp2.0/CoreSRTRepository.pdb

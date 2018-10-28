@@ -4,155 +4,166 @@
 @{
 }
 @using CoreSRT.Models.ViewModels
-
-<link rel="stylesheet" type="text/css" href="print.css" />
-<script type="text/javascript">
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" media="print"/>
+<script>
 function PrintDoc() {
+    var printContents = document.getElementById('billPrintArea').innerHTML;
+    var originalContents = document.body.innerHTML;
 
-        var toPrint = document.getElementById('billPrintArea');
+     document.body.innerHTML = printContents;
 
-        var popupWin = window.open('', '_blank', 'width=350,height=150,location=no,left=200px');
+     window.print();
 
-        popupWin.document.open();
-
-        popupWin.document.write('
-<html>
-<title>::Preview::</title>
-<link rel="stylesheet" type="text/css" href="print.css" /></head>
-<body onload="window.print()">
-    ')
-
-    popupWin.document.write(toPrint.innerHTML);
-
-    popupWin.document.write('
-</html>');
-
-        popupWin.document.close();
-
+     document.body.innerHTML = originalContents;
     }
-    </script>
+</script>
 @model BillPrintViewModel
+<br>
+<br>
+<div id="billPrintArea" class="container responsive ">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <span style="text-transform: uppercase;">@Model.Seller.Name</span><br>
+                        <small>@Model.Seller.Address<br></small>
+                        <span class="glyphicon glyphicon-envelope"></span> @Model.Seller.EmailId<br>
+                        <span class="glyphicon glyphicon-phone"></span> @Model.Seller.ContactNumber<br>
+                        <small> GSTIN: <b>@Model.Seller.GSTNo</b></small>
 
-<div id="billPrintArea" class="container">
-    <div class="row" style="border: 1px dotted black; width: 1000px; padding-left:5px">
-        <div class="col-sm-3">
+                    </div>
+                    <div class="col-sm-1"><p class="text-right">To:</p></div>
+                    <div class="col-sm-4 table-bordered">
+                        <p class="text-left">
+                            <small><b>@Model.Buyer.Name</b></small> <br>
+                            <small>  @Model.Buyer.Address<br></small>
+                            <small>  @Model.Buyer.ContactNumber</small><br>
+                            <small>  @Model.Buyer.EmailId</small><br>
+                            <small> GSTIN: @Model.Buyer.GSTNo</small>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-5">
+                        <p class="text-center"><ins><b>TAX INVOICE</b></ins></p>
+                    </div>
+                
+                <div class="col-sm-2">
+                    <p class="text-left">
+                        <small>Invoice Number : <b>@Model.BillNo</b><br></small>
+                        <small>Invoice Date   : <b>@Model.BillDate.ToShortDateString()</b><br></small>
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div class="panel panel-default" >
+                <div class="panel panel-heading" >
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>ItemNo</b></p>
+                        </div>
+                        <div class="col-sm-3">
+                            <p class="text-center"><b>Name</b></p>
+                        </div>
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>Price</b></p>
+                        </div>
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>CGST%</b></p>
+                        </div>
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>SGST%</b></p>
+                        </div>
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>CGST</b></p>
+                        </div>
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>SGST</b></p>
+                        </div>
+                        <div class="col-sm-1">
+                            <p class="text-center"><b>Quantity</b></p>
+                        </div>
+                        <div class="col-sm-2">
+                            <p class="text-center"><b>Total</b></p>
+                        </div>
+                        </div>
+                    </div>
+                        <div class="panel panel-body">
 
-        </div>
-        <div class="col-sm-3">
-            <h4>TAX INVOICE</h4>
-        </div>
-        <div class="col-sm-3">
-            <br>
-            Invoice No:@Model.BillNo
-            <br>
-            Date: @Model.BillDate.ToShortDateString()
+                            @for (int i = 0; i < Model.Items.Count; i++)
+                    {
+                        <div class="row">
+                            <div class="col-sm-1">
+                                <p class="text-center"><small> @(i + 1)</small></p>
+                            </div>
+                            <div class="col-sm-3">
+                               <p class="text-center"> <small> @Model.Items[i].Description</small></p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="text-center"><small>@Model.Items[i].Price</small></p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="text-center"><small>@Model.Items[i].CGST</small></p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="text-center"><small>
+                                @Model.Items[i].SGST
+                                </small></p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="text-center"><small>
+                                @Model.Items[i].CGSTAmount
+                                </small></p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="text-center"><small>
+                                @Model.Items[i].SGSTAmount
+                                    </small></p>
+                            </div>
+                            <div class="col-sm-1">
+                                <p class="text-center"><small>
+                                @Model.Items[i].Quantity</small></p>
+                            </div>
+                            <div class="col-sm-2">
+                                <p class="text-center"><small>
+                                @Model.Items[i].TotalPrice</small></p>
+                            </div>
+                        </div>
+                        }
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                </div>
+                                <div class="col-sm-2">
+                                    <small><b>Total Quanity : @Model.TotalQuantity</b></small>
+                                </div>
+                                <div class="col-sm-1">
+
+                                </div>
+                                <div class="col-sm-2">
+                                    <small><b>Total Amount : @Model.TotalAmount</b></small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                        <div class="panel-body">
+                            <br>
+                            <br>
+                                    <p class="text-right"><small>For @Model.Seller.Name</small></p>
+                        </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <h5>@Model.Seller.Name</h5>
-            @Model.Seller.Address
-            <p>GSTIN:: @Model.Seller.GSTNo</p>
-        </div>
-        <div class="col-sm-3">
-
-        </div>
-        <div class="col-sm-3">
-            <h5>@Model.Buyer.Name</h5>
-            @Model.Buyer.Address
-            <p>GSTIN:: @Model.Buyer.GSTNo</p>
-        </div>
-    </div>
-    <div claas="row">
-        <div class="col-sm-1">
-            ItemNo
-        </div>
-        <div class="col-sm-2">
-            Name
-        </div>
-        <div class="col-sm-1">
-            Price
-        </div>
-        <div class="col-sm-1">
-            CGST%
-        </div>
-        <div class="col-sm-1">
-            SGST%
-        </div>
-        <div class="col-sm-1">
-            CGST
-        </div>
-        <div class="col-sm-1">
-            SGST
-        </div>
-        <div class="col-sm-1">
-            Quantity
-        </div>
-        <div class="col-sm-1">
-            Total
-        </div>
-    </div>
-    <br>
-    @for (int i = 0; i < Model.Items.Count; i++)
-    {
-        <div class="row" style="border: 1px dotted black;">
-            <div class="col-sm-1">
-                @(i + 1)
-            </div>
-            <div class="col-sm-2">
-                @Model.Items[i].Description
-            </div>
-            <div class="col-sm-1">
-                @Model.Items[i].Price
-            </div>
-            <div class="col-sm-1">
-                @Model.Items[i].CGST
-            </div>
-            <div class="col-sm-1">
-
-                @Model.Items[i].SGST
-            </div>
-            <div class="col-sm-1">
-                @Model.Items[i].CGSTAmount
-            </div>
-            <div class="col-sm-1">
-                @Model.Items[i].SGSTAmount
-            </div>
-            <div class="col-sm-1">
-                @Model.Items[i].Quantity
-            </div>
-            <div class="col-sm-1">
-                @Model.Items[i].TotalPrice
-            </div>
-        </div>
-    }
-    <br>
-    <div class="row panel-footer">
-        <div class="col-sm-2">
-        </div>
-        <div class="col-sm-2">
-            Total Quanity
-        </div>
-        <div class="col-sm-2">
-            @Model.TotalQuantity
-        </div>
-        <div class="col-sm-2">
-            Total Amount
-        </div>
-        <div class="col-sm-2">
-            @Model.TotalAmount
-        </div>
-    </div>
-
-    <div class="row"></div>
-    <div class="row"></div>
-    <div class="row">
-        <div class="col-sm-2">
-            <span class="caption glyphicon-align-right">For @Model.Seller.Name</span>
-        </div>
-    </div>
-    <button id="btnPrint" onclick="PrintDoc()">
-        <span class="glyphicon-print">Print</span>
-    </button>
-</div>
+<p class="text-center">
+                  <button class="btn btn-print center" id="btnPrint" onclick="PrintDoc()">
+                        <span class="glyphicon glyphicon-print text-center"> Print</span>
+                    </button></p>
 

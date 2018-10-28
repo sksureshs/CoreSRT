@@ -23,6 +23,10 @@ namespace CoreSRT.Models.ViewModels
         [Required]
         public double TotalPrice { get; set; }
 
+        public double CGSTAmount { get; set; }
+        public double SGSTAmount { get; set; }
+        public double PerItemPrice { get; set; }
+
         public int Index { get; set; }
         public IList<ItemViewModel> Items { get; set; }
 

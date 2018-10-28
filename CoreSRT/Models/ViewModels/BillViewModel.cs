@@ -30,5 +30,7 @@ namespace CoreSRT.Models.ViewModels
         public int CustomerId { get; set; }
 
         public IList<ItemViewModel> Items { get; set; }
+
+        public DateTime BillDate { get; set; }
     }
 }
