@@ -9,7 +9,10 @@ namespace CoreSRTModels
     {
         [Key]
         public int BillingItemId { get; set; }
+
         [Required]
+        public int BillId { get; set; }
+        
         public Bill Bill { get; set; }
 
         public int ItemId { get; set; }

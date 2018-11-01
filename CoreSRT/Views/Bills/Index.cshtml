@@ -52,7 +52,8 @@
 </div>
         <div class="col-sm-2">
             <p class="text-center">
-                @Html.ActionLink("", "Edit", new { billNo = @item.BillId }, new { @class = "glyphicon glyphicon-edit" }) |  @Html.ActionLink("", "Print", new { billNo = @item.BillId }, new { @class = "glyphicon glyphicon-print" }) | @Html.ActionLink("", "Delete", new { Id = @item.BillId },
+                 @Html.ActionLink("", "Edit", new { billNo = @item.BillId }, new { @class = "glyphicon glyphicon-edit" }) |
+                  @Html.ActionLink("", "Print", new { billNo = @item.BillId }, new { @class = "glyphicon glyphicon-print" }) | @Html.ActionLink("", "Delete", new { Id = @item.BillId },
 new { onclick = "return confirm('Do you really want to delete this Bill?')", @class = "glyphicon glyphicon-remove", @style="color:red" })
             </p>
 </div>

@@ -28,7 +28,7 @@ namespace CoreSRTRepository
             modelBuilder.Entity<Item>().ToTable("Items");
             modelBuilder.Entity<Customer>().ToTable("Customers");
             modelBuilder.Entity<Bill>().ToTable("Bills");
-           // modelBuilder.Entity<BillingItem>().ToTable("BillingItems");
+            modelBuilder.Entity<BillingItem>().ToTable("BillingItems");
 
             modelBuilder.Entity<Bill>()
                         .Property(p => p.BillId).ValueGeneratedOnAdd();
@@ -93,9 +93,28 @@ namespace CoreSRTRepository
             return temp;
         }
 
+        public IEnumerable<Item> GetActiveItems()
+        {
+            return Items.ToListAsync().Result.Where(i => i.DateTo >= DateTime.Now);
+        }
+
         #region "Customer"
         public void CreateCustomer(Customer customer)
         {
+            if (string.IsNullOrWhiteSpace(customer.Address))
+            {
+                customer.Address = "";
+
+            }
+            if (string.IsNullOrWhiteSpace(customer.EmailId))
+            {
+                customer.EmailId = "";
+            }
+
+            customer.GSTNo = String.IsNullOrWhiteSpace(customer.GSTNo) ? "" : customer.GSTNo;
+
+            customer.ContactNumber = String.IsNullOrWhiteSpace(customer.ContactNumber) ? "" : customer.ContactNumber;
+
             Customers.Add(customer);
             SaveChanges();
         }
@@ -149,7 +168,7 @@ namespace CoreSRTRepository
 
         public void DeleteBill(int billId)
         {
-            var billingItems = BillingItems.Where(b => b.Bill.BillId == billId).ToList();
+            var billingItems = BillingItems.Where(b => b.BillId == billId).ToList();
 
             if (!billingItems.Any())
             {
@@ -193,7 +212,7 @@ namespace CoreSRTRepository
                 SellingPrice = billingItem.SellingPrice,
                 Quantity = billingItem.Quantity,
                 CreatedDate = DateTime.Now,
-                BillId = billingItem.Bill.BillId
+                BillId = billingItem.BillId
             };
         }
 
@@ -214,9 +233,9 @@ namespace CoreSRTRepository
                 oldbill.ShopCustomerId = bill.ShopCustomerId;
                 oldbill.TotalPrice = bill.TotalPrice;
                 oldbill.TotalQuantity = bill.TotalQuantity;
-                
 
-                SaveChanges();
+
+               // SaveChanges();
 
                 foreach (var newItem in billingItems)
                 {
@@ -225,10 +244,11 @@ namespace CoreSRTRepository
 
                     if(oldItem == null)
                     {
-                        newItem.Bill = oldbill;
+                        newItem.BillId = oldbill.BillId;
                         newItem.CreatedDate = DateTime.Now;
+                        newItem.BillingItemId = 0;
                         BillingItems.Add(newItem);
-                        SaveChanges();
+                        
                     }
                     else
                     {
@@ -241,13 +261,13 @@ namespace CoreSRTRepository
                         oldItem.Quantity = newItem.Quantity;
                         oldItem.TotalPrice = newItem.TotalPrice;
                         oldItem.UpdatedDate = DateTime.Now;
-                        oldItem.Bill = bill;
-                        BillingItems.Add(oldItem);
-                        SaveChanges();
+                        oldItem.BillId = bill.BillId;
+                        //BillingItems.Add(oldItem);
+                        
                     }
                 }
 
-
+                SaveChanges();
             }
             catch (Exception ex)
             {
@@ -262,13 +282,15 @@ namespace CoreSRTRepository
             {
                 bill.CreatedDate = DateTime.Now;
                 Bills.Add(bill);
-                SaveChanges();
+                //SaveChanges();
+
                 foreach (var item in billingItems)
                 {
                     //item.BillingItemId = 0;
                     item.CreatedDate = DateTime.Now;
                     
                     item.Bill = bill;
+                    item.BillId = bill.BillId;
                     BillingItems.Add(item);
                 }
 
@@ -285,7 +307,7 @@ namespace CoreSRTRepository
 
         public Bill GetBill(int billNo)
         {
-            var bill =  Bills.First(b => b.BillId == billNo);
+                  var bill =  Bills.First(b => b.BillId == billNo);
             bill.Shop = Customers.Single(c => c.CustomerId == bill.ShopCustomerId);
             return bill;
         }
@@ -298,16 +320,18 @@ namespace CoreSRTRepository
                 {
                     bill.Shop = Customers.Single(c => c.CustomerId == bill.ShopCustomerId);
                 }
+                
             }
             return Bills;
         }
 
         public IEnumerable<BillingItem>GetBillingItems(int billNo)
         {
-            var billingItems = BillingItems.Where(b => b.Bill.BillId == billNo);
+            var billingItems = BillingItems.Where(b => b.BillId == billNo);
             foreach(var r in billingItems)
             {
                 r.Item = Items.Single(i => i.ItemId == r.ItemId);
+                r.Bill = Bills.Single(b => b.BillId == r.BillId);
             }
             
             return billingItems;

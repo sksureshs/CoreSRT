@@ -3101,13 +3101,13 @@
       "projectName": "CoreSRTModels",
       "projectPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/CoreSRTModels.csproj",
       "packagesPath": "/Users/sureshkumar/.nuget/packages/",
-      "outputPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/",
+      "outputPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/sureshkumar/.nuget/NuGet/NuGet.Config"
+        "/Users/sureshkumar/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -3131,18 +3131,18 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": {
             "target": "Package",
-            "version": "[2.1.4, )"
+            "version": "2.1.4"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.1.4, )"
+            "version": "2.1.4"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

@@ -57,7 +57,7 @@ namespace CoreSRT.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var items = _billingContext.GetAllItems().Where(i => i.DateTo >= DateTime.Now).Select(Map).ToList();
+            var items = _billingContext.GetActiveItems().Select(Map).ToList();
 
             return View("Index", items);
         }

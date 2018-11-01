@@ -25,7 +25,7 @@ namespace CoreSRT.Controllers
                 new BillingItemViewModel()
             };
             model.Customers = _billingContext.GetAllCustomer().Select(Map).ToList();
-            model.BillingItems[0].Items = _billingContext.GetAllItems().Select(Map).ToList();
+            model.BillingItems[0].Items = _billingContext.GetActiveItems().Select(Map).ToList();
             return View(model);
         }
 
@@ -80,7 +80,7 @@ namespace CoreSRT.Controllers
             var bill = _billingContext.GetBill(billNo);
             if(bill != null){
                 model.Customers = _billingContext.GetAllCustomer().Select(Map).ToList();
-                model.BillingItems[0].Items = _billingContext.GetAllItems().Select(Map).ToList();
+                model.BillingItems[0].Items = _billingContext.GetActiveItems().Select(Map).ToList();
                 model.BillNo = bill.BillId;
                 model.BillingItems = _billingContext.GetBillingItems(billNo).Select((x,i) => MapToBillingItemView(x, i)).ToList();
                 model.CustomerId = bill.ShopCustomerId;
@@ -166,7 +166,7 @@ namespace CoreSRT.Controllers
 
             ViewData.TemplateInfo.HtmlFieldPrefix = string.Format("BillingItems[{0}]", index);
 
-            model.Items = _billingContext.GetAllItems().Select(Map).ToList();
+            model.Items = _billingContext.GetActiveItems().Select(Map).ToList();
 
             return PartialView("BillingItemViewModel", model);
         }

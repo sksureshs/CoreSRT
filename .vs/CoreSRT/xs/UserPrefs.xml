@@ -1,41 +1,41 @@
 ﻿<Properties StartupConfiguration="{1D41CC8C-940D-451B-B556-648E16CA9ACD}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CoreSRTRepository/Migrations/20181028122824_auditDate_28102018.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CoreSRTModels/BillingItem.cs">
     <Files>
-      <File FileName="CoreSRT/Views/Bills/Create.cshtml" Line="22" Column="1" />
-      <File FileName="CoreSRT/Views/Bills/BillingItemViewModel.cshtml" Line="18" Column="46" />
-      <File FileName="CoreSRT/Views/Bills/Edit.cshtml" Line="156" Column="61" />
-      <File FileName="CoreSRT/Views/Bills/BillingItemViewEdit.cshtml" Line="16" Column="49" />
-      <File FileName="CoreSRTRepository/BillingRepository.cs" Line="270" Column="17" />
-      <File FileName="CoreSRTModels/BillingItem.cs" Line="8" Column="18" />
-      <File FileName="CoreSRT/Models/ViewModels/BillingItemViewModel.cs" Line="21" Column="19" />
+      <File FileName="CoreSRT/Views/Bills/BillingItemViewModel.cshtml" Line="1" Column="1" />
+      <File FileName="CoreSRTModels/BillingItem.cs" Line="31" Column="19" />
       <File FileName="CoreSRT/Models/ViewModels/ItemViewModel.cs" Line="5" Column="18" />
-      <File FileName="CoreSRT/Models/ViewModels/BillViewModel.cs" Line="33" Column="1" />
+      <File FileName="CoreSRT/Models/ViewModels/BillViewModel.cs" Line="1" Column="1" />
       <File FileName="CoreSRT/Program.cs" Line="26" Column="1" />
       <File FileName="CoreSRTModels/Bill.cs" Line="8" Column="18" />
-      <File FileName="CoreSRT/Controllers/ItemsController.cs" Line="49" Column="14" />
-      <File FileName="CoreSRT/Views/Bills/Index.cshtml" Line="55" Column="123" />
-      <File FileName="CoreSRTModels/BillingItemAudit.cs" Line="14" Column="40" />
-      <File FileName="CoreSRT/Controllers/BillsController.cs" Line="256" Column="41" />
-      <File FileName="CoreSRT/Models/ViewModels/BillingItemCreateJsonModel.cs" Line="11" Column="47" />
-      <File FileName="CoreSRTRepository/Migrations/20181028141533_auditDate_2_28102018.cs" Line="1" Column="1" />
-      <File FileName="CoreSRTRepository/Migrations/20181028133443_auditDate_1_28102018.cs" Line="1" Column="1" />
-      <File FileName="CoreSRTRepository/Migrations/20181028122824_auditDate_28102018.cs" Line="1" Column="1" />
+      <File FileName="CoreSRT/Controllers/ItemsController.cs" Line="1" Column="1" />
+      <File FileName="CoreSRT/Models/ViewModels/BillingItemCreateJsonModel.cs" Line="1" Column="1" />
+      <File FileName="CoreSRT/Views/Customer/Create.cshtml" Line="1" Column="1" />
+      <File FileName="CoreSRT/Views/Items/Create.cshtml" Line="1" Column="1" />
+      <File FileName="CoreSRT/Views/Items/Edit.cshtml" Line="1" Column="1" />
+      <File FileName="CoreSRT/Models/ViewModels/CustomerViewModel.cs" Line="1" Column="1" />
+      <File FileName="CoreSRTRepository/BillingRepository.cs" Line="30" Column="37" />
+      <File FileName="CoreSRTModels/Customer.cs" Line="9" Column="30" />
+      <File FileName="CoreSRT/Views/Items/Index.cshtml" Line="1" Column="1" />
+      <File FileName="CoreSRT/Controllers/BillsController.cs" Line="249" Column="1" />
+      <File FileName="CoreSRT/Views/Bills/Create.cshtml" Line="1" Column="1" />
+      <File FileName="CoreSRTModels/Item.cs" Line="9" Column="1" />
+      <File FileName="CoreSRT/Views/Bills/Index.cshtml" Line="55" Column="118" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="36" column="26" />
-      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="89" column="32" />
-      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="98" column="39" />
-      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="214" column="53" />
+      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="109" column="39" />
+      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="243" column="53" />
       <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="99" column="96" />
       <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="101" column="89" />
       <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="248" column="67" />
-      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="251" column="26" />
+      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="267" column="26" />
       <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/Controllers/BillsController.cs" relfile="CoreSRT/Controllers/BillsController.cs" line="58" column="56" />
-      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="278" column="22" />
-      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="272" column="36" />
+      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="291" column="36" />
+      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="174" column="29" />
+      <Breakpoint file="/Volumes/Suresh/VS Code/CoreSRT/CoreSRTRepository/BillingRepository.cs" relfile="CoreSRTRepository/BillingRepository.cs" line="283" column="21" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
