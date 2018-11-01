@@ -30,3 +30,4 @@ D:/Suresh/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.pdb
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.AssemblyInfo.cs
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.dll
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRTModels/obj/Debug/netcoreapp2.0/CoreSRTModels.csprojAssemblyReference.cache

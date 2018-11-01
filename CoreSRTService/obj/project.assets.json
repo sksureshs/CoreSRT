@@ -674,13 +674,13 @@
       "projectName": "CoreSRTService",
       "projectPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/CoreSRTService.csproj",
       "packagesPath": "/Users/sureshkumar/.nuget/packages/",
-      "outputPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj",
+      "outputPath": "/Volumes/Suresh/VS Code/CoreSRT/CoreSRTService/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/sureshkumar/.config/NuGet/NuGet.Config"
+        "/Users/sureshkumar/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -705,7 +705,7 @@
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
           }
         },
