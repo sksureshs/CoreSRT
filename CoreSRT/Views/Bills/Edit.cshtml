@@ -69,11 +69,11 @@
         </tr>
     </thead>
     <tbody class="itemCollections">
-        @for (int i = 0; i < Model.BillingItems.Count; i++)
-    {
+        @foreach(var model in Model.BillingItems)
+        {
 
-        @Html.Partial("BillingItemViewModel", Model.BillingItems[i]);
-}
+            @Html.Partial("BillingItemViewModel", model);
+         }
     </tbody>
     <tfoot>
         <tr>
@@ -188,4 +188,5 @@ $(function(){
             return (parms);
         }
     })
-})(jQuery);</script>
+})(jQuery);
+</script>

@@ -198,6 +198,7 @@ namespace CoreSRT.Controllers
 
                 },
                 Items = billingItems.Select(Map).ToList(),
+
             };
 
             return billViewModel;

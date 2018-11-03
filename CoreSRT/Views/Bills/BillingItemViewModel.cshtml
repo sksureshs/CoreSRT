@@ -12,45 +12,45 @@
     
     <td class="col-xs-2">
         @Html.DropDownListFor(m => m.ItemId, new SelectList(Model.Items,
-                         "Id", "Description"), "Select Item", new { onchange = "ChangeItem(" + Model.Index + ")" })
+                           "Id", "Description"), "Select Item", new { @id = Model.Index + "ItemId", onchange = "ChangeItem(" + Model.Index + ")" })
         @Html.ValidationMessageFor(m => m.ItemId)
 
         @Html.HiddenFor(m => m.BillingItemId)
 
-    <input id="m.Index" hidden="hidden">
+        <input id="m.Index" hidden="hidden">
+    </td>
+    <td class="col-md-2">
+        @Html.TextBoxFor(m => m.CGST, new { @id = Model.Index + "CGST", @readonly = "readonly", @style = "width:40px" })
+
+
+    </td>
+    <td class="col-md-2" width="10ppx">
+        @Html.TextBoxFor(m => m.SGST, new { @id = Model.Index + "SGST", @readonly = "readonly", @style = "width:40px" })
+
     </td>
         <td class="col-md-2">
-            @Html.TextBoxFor(m => m.CGST, new { @readonly = "readonly", @style = "width:40px"  })
-
-
-        </td>
-        <td class="col-md-2" width="10ppx">
-            @Html.TextBoxFor(m => m.SGST, new { @readonly = "readonly", @style = "width:40px" })
-
-        </td>
-        <td class="col-md-2">
-            @Html.TextBoxFor(m => m.OriginalPrice, new { @readonly = "readonly", @style = "width:40px" })
+            @Html.TextBoxFor(m => m.OriginalPrice, new { @id = Model.Index + "OriginalPrice", @readonly = "readonly", @style = "width:40px" })
 
         </td>
         <td>
-            @Html.TextBoxFor(m => m.SellingPrice, new { @style = "width:80px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+            @Html.TextBoxFor(m => m.SellingPrice, new { @id = Model.Index + "SellingPrice", @style = "width:80px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
 
         </td>
         <td>
-            @Html.TextBoxFor(m => m.Quantity, new { @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+            @Html.TextBoxFor(m => m.Quantity, new { @id = Model.Index + "Quantity", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
         </td>
         <td>
-            @Html.TextBoxFor(m => m.TotalPrice, new { @readonly = "readonly", @style = "width:80px" })
+            @Html.TextBoxFor(m => m.TotalPrice, new { @id = Model.Index + "TotalPrice", @readonly = "readonly", @style = "width:80px" })
         </td>
 
         <td>
-            @Html.TextBoxFor(m => m.CGSTAmount, new { @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+            @Html.TextBoxFor(m => m.CGSTAmount, new { @id = Model.Index + "CGSTAmount", @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
         </td>
         <td>
-            @Html.TextBoxFor(m => m.SGSTAmount, new { @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+            @Html.TextBoxFor(m => m.SGSTAmount, new { @id = Model.Index + "SGSTAmount", @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
         </td>
         <td>
-            @Html.TextBoxFor(m => m.PerItemPrice, new { @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
+            @Html.TextBoxFor(m => m.PerItemPrice, new { @id = Model.Index + "PerItemPrice", @readonly = "readonly", @style = "width:40px", onchange = "ChangeTotalPrice(" + Model.Index + ")" })
         </td>
 </tr>
 
@@ -59,20 +59,15 @@
     {
        console.log(index);
        var items = @{@Html.Raw(Json.Serialize(Model.Items))};
-       var e = $('[id*="ItemId"]').val();
 
-       console.log(6);
-
-       if(index >0)
-       {
-          var tempId= index+'__ItemId';
-          e = $('[id*='+ tempId +']').val();
-       }
+       var tempId= index+'ItemId';
+       var e = $('[id*='+ tempId +']').val();
+       
        for(i=0; i<items.length; i++)
        {
-          var cgstId = (index == 0) ?'CGST' : index+'__CGST';
-          var sgstId = (index == 0) ?'SGST' : index+'__SGST';
-          var ogPriceId = (index == 0) ?'OriginalPrice' : index+'__OriginalPrice';
+          var cgstId = index+'CGST';
+          var sgstId =  index+'SGST';
+          var ogPriceId = index+'OriginalPrice';
 
           if(items[i].id == e)
           {
@@ -86,23 +81,22 @@
 
     function ChangeTotalPrice(index)
     {
-        console.log(index);
-        var tpPriceId = (index == 0) ?'TotalPrice' : index+'__TotalPrice';
-        var selPriceId = (index == 0) ?'SellingPrice' : index+'__SellingPrice';
-        var cgstPerId = (index ==0) ? "CGST" : index+'__CGST';
-        var sgstPerId = (index ==0) ? "SGST" : index+'__SGST';
+        var tpPriceId = index+'TotalPrice';
+        var selPriceId = index+'SellingPrice';
+        var cgstPerId =  index+'CGST';
+        var sgstPerId =  index+'SGST';
 
-        var cgstPerAmt = (index ==0) ? "CGSTAmount" : index+'__CGSTAmount';
-        var sgstPerAmt = (index ==0) ? "SGSTAmount" : index+'__SGSTAmount';
+        var cgstPerAmt =  index+'CGSTAmount';
+        var sgstPerAmt = index+'SGSTAmount';
         $('[id*='+cgstPerAmt+']').first().val($('[id*='+selPriceId+']').first().val() * $('[id*='+cgstPerId+']').first().val()/100)
         $('[id*='+sgstPerAmt+']').first().val($('[id*='+selPriceId+']').first().val() * $('[id*='+sgstPerId+']').first().val()/100)
 
-        var perItemPrice = (index == 0)?"PerItemPrice" : index+'__PerItemPrice';
+        var perItemPrice = index+'PerItemPrice';
 
         $('[id*='+perItemPrice+']').first().val(parseInt($('[id*='+selPriceId+']').first().val()) + parseFloat($('[id*='+cgstPerAmt+']').first().val())
                             + parseFloat($('[id*='+sgstPerAmt+']').first().val()));
 
-        var quanId = (index == 0) ?'Quantity' : index+'__Quantity';
+        var quanId = index+'Quantity';
         $('[id*='+tpPriceId+']').first().val($('[id*='+perItemPrice+']').first().val() * $('[id*='+quanId+']').first().val());
     }
 </script>

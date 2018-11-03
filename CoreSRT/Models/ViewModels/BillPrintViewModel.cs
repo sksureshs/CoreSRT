@@ -13,7 +13,7 @@ namespace CoreSRT.Models.ViewModels
 
         public IList<BillPrintItemViewModel> Items { get; set; }
 
-        public int TotalQuantity { get { return Items.Count(); } }
+        public int TotalQuantity { get { return Items.Sum(i=>i.Quantity); } }
         public double TotalAmount { get{
                 return Items.Sum(i => i.TotalPrice);
             } }
