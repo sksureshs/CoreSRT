@@ -101,19 +101,7 @@ namespace CoreSRTRepository
         #region "Customer"
         public void CreateCustomer(Customer customer)
         {
-            if (string.IsNullOrWhiteSpace(customer.Address))
-            {
-                customer.Address = "";
-
-            }
-            if (string.IsNullOrWhiteSpace(customer.EmailId))
-            {
-                customer.EmailId = "";
-            }
-
-            customer.GSTNo = String.IsNullOrWhiteSpace(customer.GSTNo) ? "" : customer.GSTNo;
-
-            customer.ContactNumber = String.IsNullOrWhiteSpace(customer.ContactNumber) ? "" : customer.ContactNumber;
+            UpdateCustomerNonNullableProperties(customer);
 
             Customers.Add(customer);
             SaveChanges();
@@ -132,13 +120,35 @@ namespace CoreSRTRepository
             SaveChanges();
         }
 
+        private void UpdateCustomerNonNullableProperties(Customer customer)
+        {
+
+            if (string.IsNullOrWhiteSpace(customer.Address))
+            {
+                customer.Address = "";
+
+            }
+            if (string.IsNullOrWhiteSpace(customer.EmailId))
+            {
+                customer.EmailId = "";
+            }
+
+            customer.GSTNo = String.IsNullOrWhiteSpace(customer.GSTNo) ? "" : customer.GSTNo;
+
+            customer.ContactNumber = String.IsNullOrWhiteSpace(customer.ContactNumber) ? "" : customer.ContactNumber;
+
+        }
+
         public void UpdateCustomer(int customerId, Customer customer)
         {
             var oldCustomer = Customers.Find(customerId);
+
             if (oldCustomer == null)
             {
                 throw new Exception($"Customer {customerId} not present!");
             }
+
+            UpdateCustomerNonNullableProperties(customer);
 
             oldCustomer.Address = customer.Address;
             oldCustomer.ContactNumber = customer.ContactNumber;

@@ -93,7 +93,7 @@
 
         var perItemPrice = index+'PerItemPrice';
 
-        $('[id*='+perItemPrice+']').first().val(parseInt($('[id*='+selPriceId+']').first().val()) + parseFloat($('[id*='+cgstPerAmt+']').first().val())
+        $('[id*='+perItemPrice+']').first().val(parseFloat($('[id*='+selPriceId+']').first().val()) + parseFloat($('[id*='+cgstPerAmt+']').first().val())
                             + parseFloat($('[id*='+sgstPerAmt+']').first().val()));
 
         var quanId = index+'Quantity';

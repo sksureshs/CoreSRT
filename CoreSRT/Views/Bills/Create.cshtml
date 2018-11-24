@@ -194,7 +194,7 @@
                 var keys = values.shift().split(".");
                 var key = decodeURIComponent(keys[keys.length -1]);
                 var value = values.join("=")
-                parms[key] = parseInt(decodeURIComponent(value));
+                parms[key] = parseFloat(decodeURIComponent(value));
             }
             return (parms);
         }
