@@ -189,7 +189,7 @@ using CoreSRT.Models;
                 ");
             EndContext();
             BeginContext(5773, 150, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "25a284d916d14e0eb77f89b83ed357da", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "78be7f3e3c564c6196a317931f9597f9", async() => {
                 BeginContext(5830, 89, true);
                 WriteLiteral("<p class=\"text-uppercase\"><span class=\"btn btn-primary btn-lg btn-block\">Items</span></p>");
                 EndContext();
@@ -215,7 +215,7 @@ using CoreSRT.Models;
             WriteLiteral("\n                </td>\n            </tr>\n        <tr>\n            <td>\r\n                    ");
             EndContext();
             BeginContext(6015, 156, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d553062f7a094563931c1489b7bfe3cf", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "72ee5429212f4d0cb9c39cfb85e40d20", async() => {
                 BeginContext(6075, 92, true);
                 WriteLiteral("<p class=\"text-uppercase\"><span class=\"btn btn-primary btn-lg btn-block\">Customer</span></p>");
                 EndContext();
@@ -241,7 +241,7 @@ using CoreSRT.Models;
             WriteLiteral("\n                </td>\n            </tr>\n        <tr>\n            <td>\r\n                    ");
             EndContext();
             BeginContext(6263, 150, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "812ad4f701c04f2aa5311ddbe89f90ea", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1bc050b276be4851a56b4a714aff6791", async() => {
                 BeginContext(6320, 89, true);
                 WriteLiteral("<p class=\"text-uppercase\"><span class=\"btn btn-primary btn-lg btn-block\">Bills</span></p>");
                 EndContext();

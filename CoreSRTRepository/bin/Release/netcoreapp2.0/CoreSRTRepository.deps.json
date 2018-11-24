@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "aeadf25fbe8a19c93f9ee322a2e374f19e7db44d"
+    "signature": "f59e8071a13ec1de97b4083b0003537fc9656fed"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,8 +11,8 @@
           "CoreSRTModels": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "2.1.4",
           "Microsoft.EntityFrameworkCore.Tools": "2.1.4",
-          "MySql.Data": "8.0.12",
-          "MySql.Data.EntityFrameworkCore": "8.0.12",
+          "MySql.Data": "8.0.13",
+          "MySql.Data.EntityFrameworkCore": "8.0.13",
           "Pomelo.EntityFrameworkCore.MySql": "2.1.2"
         },
         "runtime": {
@@ -208,7 +208,7 @@
         }
       },
       "Microsoft.NETCore.Targets/1.1.0": {},
-      "MySql.Data/8.0.12": {
+      "MySql.Data/8.0.13": {
         "dependencies": {
           "Google.Protobuf": "3.5.1",
           "System.Configuration.ConfigurationManager": "4.4.1",
@@ -217,20 +217,20 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/MySql.Data.dll": {
-            "assemblyVersion": "8.0.12.0",
-            "fileVersion": "8.0.12.0"
+            "assemblyVersion": "8.0.13.0",
+            "fileVersion": "8.0.13.0"
           }
         }
       },
-      "MySql.Data.EntityFrameworkCore/8.0.12": {
+      "MySql.Data.EntityFrameworkCore/8.0.13": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "2.1.4",
-          "MySql.Data": "8.0.12"
+          "MySql.Data": "8.0.13"
         },
         "runtime": {
           "lib/netstandard2.0/MySql.Data.EntityFrameworkCore.dll": {
-            "assemblyVersion": "8.0.12.0",
-            "fileVersion": "8.0.12.0"
+            "assemblyVersion": "8.0.13.0",
+            "fileVersion": "8.0.13.0"
           }
         }
       },
@@ -755,19 +755,19 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
-    "MySql.Data/8.0.12": {
+    "MySql.Data/8.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-I2jGfuyeomrGJ+N9O+vuV2ucyeayf/tMFREKPdjUcs1/wUF0t+WgUnnzJmJl4sNePNR1fEvAGaGbVAo4uLSF2A==",
-      "path": "mysql.data/8.0.12",
-      "hashPath": "mysql.data.8.0.12.nupkg.sha512"
+      "sha512": "sha512-mXfjg2pOdzpyd4wkXZPKYcNluzV68ggAO/LPcT7iuzU5kDS7livUDR8IsKkarEhBmRxBy0XmBnUOkEWJvfOW9Q==",
+      "path": "mysql.data/8.0.13",
+      "hashPath": "mysql.data.8.0.13.nupkg.sha512"
     },
-    "MySql.Data.EntityFrameworkCore/8.0.12": {
+    "MySql.Data.EntityFrameworkCore/8.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EE/fPV+tmBW/GCb/Mmm9a+90AlBCKo3IQiw5DecWs84yWOBIeADO9vV71pEzglr25TxE3/99td+Gd+UpoLwL5g==",
-      "path": "mysql.data.entityframeworkcore/8.0.12",
-      "hashPath": "mysql.data.entityframeworkcore.8.0.12.nupkg.sha512"
+      "sha512": "sha512-sNVNRZOcj2U3zGebejYxrDvYvZVf5F45tmGW3bl5HghoOgL9nwT2t8NRF7WTkaKGXD7QkhUgt3xHyDXr/Xc/6A==",
+      "path": "mysql.data.entityframeworkcore/8.0.13",
+      "hashPath": "mysql.data.entityframeworkcore.8.0.13.nupkg.sha512"
     },
     "MySqlConnector/0.44.1": {
       "type": "package",

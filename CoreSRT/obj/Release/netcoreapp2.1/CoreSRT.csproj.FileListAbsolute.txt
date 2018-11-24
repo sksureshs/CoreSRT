@@ -42,3 +42,5 @@
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Release/netcoreapp2.1/CoreSRT.csproj.CopyComplete
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Release/netcoreapp2.1/CoreSRT.dll
 /Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/Release/netcoreapp2.1/CoreSRT.pdb
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/release/netcoreapp2.1/Razor/Views/Bills/BillingItemViewEdit.g.cshtml.cs
+/Volumes/Suresh/VS Code/CoreSRT/CoreSRT/obj/release/netcoreapp2.1/Razor/Views/Bills/Edit.g.cshtml.cs
